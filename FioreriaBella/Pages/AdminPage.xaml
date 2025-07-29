@@ -1,0 +1,91 @@
+<Page x:Class="FioreriaBella.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="AdminPage">
+
+  <Page.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Page.Resources>
+
+  <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <Grid Background="Transparent">
+      <Border Background="#FFFDF5F0"
+              CornerRadius="20"
+              Padding="30"
+              BorderThickness="3"
+              BorderBrush="SaddleBrown"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Width="600"
+              Margin="0,20,0,20"
+              Opacity="0.97">
+
+        <StackPanel HorizontalAlignment="Center" Width="500" >
+
+          <TextBlock Text="Pannello Amministratore"
+                     FontSize="24"
+                     FontWeight="Bold"
+                     Foreground="SaddleBrown"
+                     HorizontalAlignment="Center"
+                     Margin="0,0,0,10"/>
+
+          <TextBlock x:Name="UsernameText"
+                     FontSize="16"
+                     FontWeight="Bold"
+                     Foreground="DarkOliveGreen"
+                     HorizontalAlignment="Center"
+                     Margin="0,0,0,5"/>
+
+          <TextBlock x:Name="EmailText"
+                     FontSize="14"
+                     Foreground="DarkOliveGreen"
+                     HorizontalAlignment="Center"
+                     Margin="0,0,0,15"/>
+
+          <TextBlock Text="Benvenuto nel pannello di amministrazione. Da qui puoi gestire gli utenti, i prodotti e gli ordini."
+                     FontSize="14"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     Margin="0,0,0,20"/>
+
+          <WrapPanel HorizontalAlignment="Center" Margin="0,0,0,10">
+            <Button Content="Utenti"
+                    Style="{StaticResource ElegantButtonStyle}"
+                    Width="150"
+                    Margin="10"
+                    Click="ManageUsers_Click"/>
+            <Button Content="Prodotti"
+                    Style="{StaticResource ElegantButtonStyle}"
+                    Width="150"
+                    Margin="10"
+                    Click="ManageProducts_Click"/>
+            <Button Content="Ordini"
+                    Style="{StaticResource ElegantButtonStyle}"
+                    Width="150"
+                    Margin="10"
+                    Click="ManageOrders_Click"/>
+          </WrapPanel>
+
+          <Button Content="Dashboard"
+                  Style="{StaticResource ElegantButtonStyle}"
+                  Width="200"
+                  Margin="0,10,0,0"
+                  HorizontalAlignment="Center"
+                  Click="Dashboard_Click"/>
+
+          <Separator Margin="0,20,0,20"/>
+
+          <Button Content="Esci"
+                  Style="{StaticResource OutlinedButtonStyle}"
+                  Width="200"
+                  HorizontalAlignment="Center"
+                  Click="Logout_Click"/>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </ScrollViewer>
+</Page>
