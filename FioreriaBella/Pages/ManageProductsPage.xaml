@@ -24,6 +24,13 @@
 
       <StackPanel>
 
+        <Button Content="← Indietro"
+                Width="100"
+                Margin="0,0,0,15"
+                HorizontalAlignment="Left"
+                Style="{StaticResource ElegantButtonStyle}"
+                Click="Back_Click"/>
+
         <TextBlock Text="Gestione Prodotti"
                    FontSize="26"
                    FontFamily="Georgia"
@@ -40,21 +47,24 @@
                 Click="Add_Click"/>
 
         <DataGrid x:Name="ProductsGrid"
-          AutoGenerateColumns="False"
-          CanUserAddRows="False"
-          SelectionMode="Single"
-          SelectionUnit="Cell"
-          Style="{StaticResource ElegantDataGridStyle}"
-          HeadersVisibility="Column"
-          RowHeight="90"
-          ColumnHeaderHeight="35"
-          Margin="0,0,0,10">
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  SelectionMode="Single"
+                  SelectionUnit="Cell"
+                  HeadersVisibility="Column"
+                  RowHeight="90"
+                  ColumnHeaderHeight="35"
+                  Margin="0,0,0,10"
+                  Style="{StaticResource ElegantDataGridStyle}">
+
           <DataGrid.Columns>
 
             <DataGridTemplateColumn Header="ID" Width="50">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                  <Border IsHitTestVisible="False">
+                    <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                  </Border>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
@@ -62,12 +72,14 @@
             <DataGridTemplateColumn Header="Nome" Width="144">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <TextBlock Text="{Binding Name}" 
-                     TextWrapping="Wrap"
-                     TextTrimming="CharacterEllipsis"
-                     FontFamily="Palatino Linotype"
-                     Padding="4"
-                     Foreground="#4B2E2B"/>
+                  <Border IsHitTestVisible="False">
+                    <TextBlock Text="{Binding Name}" 
+                               TextWrapping="Wrap"
+                               TextTrimming="CharacterEllipsis"
+                               FontFamily="Palatino Linotype"
+                               Padding="4"
+                               Foreground="#4B2E2B"/>
+                  </Border>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
@@ -75,12 +87,14 @@
             <DataGridTemplateColumn Header="Descrizione" Width="180">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <TextBlock Text="{Binding Description}"
-                 TextWrapping="Wrap"
-                 TextTrimming="CharacterEllipsis"
-                 FontFamily="Palatino Linotype"
-                 Foreground="#4B2E2B"
-                 Padding="4"/>
+                  <Border IsHitTestVisible="False">
+                    <TextBlock Text="{Binding Description}"
+                               TextWrapping="Wrap"
+                               TextTrimming="CharacterEllipsis"
+                               FontFamily="Palatino Linotype"
+                               Foreground="#4B2E2B"
+                               Padding="4"/>
+                  </Border>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
@@ -91,11 +105,11 @@
             <DataGridTemplateColumn Header="Immagine" Width="100">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <Border Width="60" Height="60" BorderBrush="Goldenrod" BorderThickness="1" CornerRadius="4">
+                  <Border IsHitTestVisible="False" Width="60" Height="60" BorderBrush="Goldenrod" BorderThickness="1" CornerRadius="4">
                     <Image Source="{Binding ImageUrl}"
-                   Stretch="UniformToFill"
-                   ClipToBounds="True"
-                   Width="60" Height="60"/>
+                           Stretch="UniformToFill"
+                           ClipToBounds="True"
+                           Width="60" Height="60"/>
                   </Border>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
@@ -106,17 +120,17 @@
                 <DataTemplate>
                   <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Width="30" Height="30"
-                    Margin="3"
-                    Style="{StaticResource IconButtonStyle}"
-                    ToolTip="Modifica"
-                    Click="EditRow_Click">
+                            Margin="3"
+                            Style="{StaticResource IconButtonStyle}"
+                            ToolTip="Modifica"
+                            Click="EditRow_Click">
                       <Image Source="pack://application:,,,/Resources/edit_icon.png" Width="18" Height="18"/>
                     </Button>
                     <Button Width="30" Height="30"
-                    Margin="3"
-                    Style="{StaticResource IconButtonStyle}"
-                    ToolTip="Elimina"
-                    Click="DeleteRow_Click">
+                            Margin="3"
+                            Style="{StaticResource IconButtonStyle}"
+                            ToolTip="Elimina"
+                            Click="DeleteRow_Click">
                       <Image Source="pack://application:,,,/Resources/delete_icon.png" Width="18" Height="18"/>
                     </Button>
                   </StackPanel>

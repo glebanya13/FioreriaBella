@@ -34,12 +34,45 @@ namespace FioreriaBella.Pages
 
     private void EditRow_Click(object sender, RoutedEventArgs e)
     {
-      var product = ((FrameworkElement)sender).DataContext as Product;
+      if (((FrameworkElement)sender).DataContext is Product selectedProduct)
+      {
+        var dialog = new ProductDialog(selectedProduct);
+        if (dialog.ShowDialog() == true)
+        {
+          _repo.Update(dialog.Product);
+          LoadProducts();
+        }
+      }
     }
 
     private void DeleteRow_Click(object sender, RoutedEventArgs e)
     {
-      var product = ((FrameworkElement)sender).DataContext as Product;
+      if (((FrameworkElement)sender).DataContext is Product selectedProduct)
+      {
+        var result = MessageBox.Show($"Vuoi eliminare il prodotto \"{selectedProduct.Name}\"?",
+                                     "Conferma eliminazione",
+                                     MessageBoxButton.YesNo,
+                                     MessageBoxImage.Warning);
+
+        if (result == MessageBoxResult.Yes)
+        {
+          _repo.Delete(selectedProduct.Id);
+          LoadProducts();
+        }
+      }
     }
+
+    private void Back_Click(object sender, RoutedEventArgs e)
+    {
+      if (this.NavigationService != null && this.NavigationService.CanGoBack)
+      {
+        this.NavigationService.GoBack();
+      }
+      else
+      {
+        MessageBox.Show("Non è possibile tornare indietro.");
+      }
+    }
+
   }
 }

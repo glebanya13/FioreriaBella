@@ -198,17 +198,71 @@
     <Setter Property="Background" Value="White"/>
     <Setter Property="ToolTip" Value="{Binding Name}"/>
     <Setter Property="Cursor" Value="Hand"/>
-    <Setter Property="IsHitTestVisible" Value="False"/>
-    <Style.Triggers>
-      <Trigger Property="IsMouseOver" Value="True">
-        <Setter Property="Background" Value="#FFF7E4C6"/>
-      </Trigger>
-      <Trigger Property="IsSelected" Value="True">
-        <Setter Property="Background" Value="#FFD9B67D"/>
-        <Setter Property="Foreground" Value="Black"/>
-      </Trigger>
-    </Style.Triggers>
+    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+    <Setter Property="OverridesDefaultStyle" Value="True"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="DataGridRow">
+          <Border x:Name="DGR_Border" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+            <SelectiveScrollingGrid>
+              <SelectiveScrollingGrid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+              </SelectiveScrollingGrid.ColumnDefinitions>
+              <SelectiveScrollingGrid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </SelectiveScrollingGrid.RowDefinitions>
+              <DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+              <DataGridDetailsPresenter Grid.Row="1" Grid.Column="1" Visibility="{TemplateBinding DetailsVisibility}" />
+            </SelectiveScrollingGrid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+              <Setter TargetName="DGR_Border" Property="Background" Value="#FFD9B67D"/>
+              <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="DGR_Border" Property="Background" Value="#FFF7E4C6"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Foreground" Value="#888"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
   </Style>
+
+  <Style TargetType="DataGridCell">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Padding" Value="4"/>
+    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+    <Setter Property="OverridesDefaultStyle" Value="True"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="DataGridCell">
+          <Border x:Name="CellBorder" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="{TemplateBinding Padding}"/>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+              <Setter TargetName="CellBorder" Property="Background" Value="#FFD9B67D"/>
+              <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="CellBorder" Property="Background" Value="#FFF7E4C6"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Foreground" Value="#888"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
 
   <Style x:Key="IconButtonStyle" TargetType="Button">
     <Setter Property="Width" Value="32"/>
@@ -228,7 +282,8 @@
                 CornerRadius="6"
                 SnapsToDevicePixels="True">
             <ContentPresenter HorizontalAlignment="Center"
-                            VerticalAlignment="Center"/>
+                            VerticalAlignment="Center"
+                            RecognizesAccessKey="True"/>
           </Border>
           <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -238,6 +293,9 @@
             <Trigger Property="IsPressed" Value="True">
               <Setter Property="Background" Value="#FFD9B67D"/>
               <Setter Property="BorderBrush" Value="#A67C00"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Opacity" Value="0.4"/>
             </Trigger>
           </ControlTemplate.Triggers>
         </ControlTemplate>

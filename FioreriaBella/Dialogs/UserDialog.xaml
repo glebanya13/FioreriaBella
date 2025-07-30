@@ -1,0 +1,79 @@
+<Window x:Class="FioreriaBella.Dialogs.UserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dettagli Utente"
+        Height="450" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Border BorderBrush="Goldenrod"
+          BorderThickness="4"
+          CornerRadius="12"
+          Background="#FFFDF5F0"
+          Padding="20"
+          SnapsToDevicePixels="True">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <TextBlock Text="Dettagli Utente"
+                 FontFamily="Georgia"
+                 FontSize="22"
+                 FontWeight="Bold"
+                 Foreground="SaddleBrown"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,20"/>
+
+      <Grid Grid.Row="1" Margin="0,0,0,10">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Username:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,10" Grid.Row="0" Grid.Column="0"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,5,0,0">
+          <TextBox x:Name="UsernameTextBox" Text="{Binding Username}" Style="{StaticResource ElegantInputStyle}"/>
+          <TextBlock x:Name="UsernameError" Foreground="Red" FontSize="12" Height="18" Text=""/>
+        </StackPanel>
+
+        <TextBlock Text="Email:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,10" Grid.Row="1" Grid.Column="0"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,5,0,0">
+          <TextBox x:Name="EmailTextBox" Text="{Binding Email}" Style="{StaticResource ElegantInputStyle}"/>
+          <TextBlock x:Name="EmailError" Foreground="Red" FontSize="12" Height="18" Text=""/>
+        </StackPanel>
+
+        <TextBlock Text="Ruolo:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,10" Grid.Row="2" Grid.Column="0"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,5,0,0">
+          <TextBox x:Name="RoleTextBox" Text="{Binding Role}" Style="{StaticResource ElegantInputStyle}"/>
+          <TextBlock x:Name="RoleError" Foreground="Red" FontSize="12" Height="18" Text=""/>
+        </StackPanel>
+      </Grid>
+
+      <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+        <Button Content="Salva" Width="120" Style="{StaticResource ElegantButtonStyle}" Margin="5" Click="Save_Click"/>
+        <Button Content="Annulla" Width="100" Style="{StaticResource OutlinedButtonStyle}" Margin="5" Click="Cancel_Click"/>
+      </StackPanel>
+
+    </Grid>
+  </Border>
+</Window>
