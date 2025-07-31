@@ -45,7 +45,7 @@ namespace FioreriaBella.Pages
       if (user.Role == "Admin")
         NavigationService?.Navigate(new AdminPage(user.Username, user.Email));
       else
-        NavigationService?.Navigate(new UserPage(user.Username, user.Email, user.Role));
+        NavigationService?.Navigate(new UserPage(user.Username, user.Email, user.Role, user.Id));
     }
 
     private void RegisterButton_Click(object sender, RoutedEventArgs e)

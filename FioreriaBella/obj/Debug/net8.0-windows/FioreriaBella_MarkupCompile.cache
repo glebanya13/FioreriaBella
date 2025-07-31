@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\App.xaml
 151744460203
 
-29523583970
+35246179017
 2291587415447
 Dialogs\OrderDialog.xaml;Dialogs\ProductDialog.xaml;Dialogs\UserDialog.xaml;MainWindow.xaml;Pages\AdminPage.xaml;Pages\CartPage.xaml;Pages\CatalogPage.xaml;Pages\LoginPage.xaml;Pages\ManageOrdersPage.xaml;Pages\ManageProductsPage.xaml;Pages\ManageUsersPage.xaml;Pages\RegisterPage.xaml;Pages\UserPage.xaml;Pages\WishlistPage.xaml;Resources\Styles.xaml;
 

@@ -1,3 +1,4 @@
+using FioreriaBella.Models;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -8,19 +9,21 @@ namespace FioreriaBella.Pages
     public string Username { get; set; }
     public string Email { get; set; }
     public string Role { get; set; }
+    public int UserId { get; set; }
 
-    public UserPage(string username, string email, string role)
+    public UserPage(string username, string email, string role, int userId)
     {
       InitializeComponent();
       Username = username;
       Email = email;
       Role = role;
+      UserId = userId;
       DataContext = this;
     }
 
     private void ExploreCatalog_Click(object sender, RoutedEventArgs e)
     {
-      NavigationService?.Navigate(new CatalogPage());
+      NavigationService?.Navigate(new CatalogPage(UserId));
     }
 
     private void Cart_Click(object sender, RoutedEventArgs e)
