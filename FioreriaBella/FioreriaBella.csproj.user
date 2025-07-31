@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Dialogs\OrderDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Dialogs\ProductDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -14,6 +17,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\AdminPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CartPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CatalogPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\LoginPage.xaml.cs">
@@ -34,8 +43,14 @@
     <Compile Update="Pages\UserPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\WishlistPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Dialogs\OrderDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dialogs\ProductDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -46,6 +61,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\AdminPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CartPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CatalogPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\LoginPage.xaml">
@@ -64,6 +85,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WishlistPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

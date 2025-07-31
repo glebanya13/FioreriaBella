@@ -90,20 +90,23 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
           <Button Content="Esplora Catalogo"
-                  Style="{StaticResource ElegantButtonStyle}"
-                  Width="140"
-                  Height="38"
-                  Margin="5,0"/>
+            Style="{StaticResource ElegantButtonStyle}"
+            Width="140"
+            Height="38"
+            Margin="5,0"
+            Click="ExploreCatalog_Click"/>
           <Button Content="Cesta"
-                  Style="{StaticResource ElegantButtonStyle}"
-                  Width="140"
-                  Height="38"
-                  Margin="5,0"/>
+            Style="{StaticResource ElegantButtonStyle}"
+            Width="140"
+            Height="38"
+            Margin="5,0"
+            Click="Cart_Click"/>
           <Button Content="Lista Desideri"
-                  Style="{StaticResource ElegantButtonStyle}"
-                  Width="140"
-                  Height="38"
-                  Margin="5,0"/>
+            Style="{StaticResource ElegantButtonStyle}"
+            Width="140"
+            Height="38"
+            Margin="5,0"
+            Click="Wishlist_Click"/>
         </StackPanel>
 
         <Button Content="Esci"

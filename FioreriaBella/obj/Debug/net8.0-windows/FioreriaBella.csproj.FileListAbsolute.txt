@@ -171,3 +171,12 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\bin\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\bin\Debug\net8.0-windows\FioreriaBella.pdb
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.genruntimeconfig.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\ref\FioreriaBella.dll
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Dialogs\OrderDialog.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Dialogs\OrderDialog.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\CartPage.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\CatalogPage.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\WishlistPage.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\CartPage.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\CatalogPage.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\Pages\WishlistPage.baml

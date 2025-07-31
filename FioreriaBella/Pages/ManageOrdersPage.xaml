@@ -1,14 +1,85 @@
-﻿<Page x:Class="FioreriaBella.Pages.ManageOrdersPage"
+<Page x:Class="FioreriaBella.Pages.ManageOrdersPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FioreriaBella.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ManageOrdersPage">
+      Title="Gestione Ordini">
 
-    <Grid>
-        
-    </Grid>
+  <Page.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Page.Resources>
+
+  <Grid>
+    <Border Padding="30"
+            BorderBrush="Goldenrod"
+            BorderThickness="2"
+            CornerRadius="12"
+            Margin="30"
+            Background="#FFFDF5F0"
+            SnapsToDevicePixels="True">
+
+      <StackPanel>
+
+        <Button Content="← Indietro"
+                Width="100"
+                Margin="0,0,0,15"
+                HorizontalAlignment="Left"
+                Style="{StaticResource ElegantButtonStyle}"
+                Click="Back_Click"/>
+
+        <TextBlock Text="Gestione Ordini"
+                   FontSize="26"
+                   FontFamily="Georgia"
+                   FontWeight="Bold"
+                   Foreground="DarkOliveGreen"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <DataGrid x:Name="OrdersGrid"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  SelectionMode="Single"
+                  RowHeight="60"
+                  ColumnHeaderHeight="35"
+                  Margin="0,0,0,10"
+                  Style="{StaticResource ElegantDataGridStyle}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+            <DataGridTextColumn Header="Cliente" Binding="{Binding CustomerName}" Width="*"/>
+            <DataGridTextColumn Header="Data" Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}" Width="100"/>
+            <DataGridTextColumn Header="Totale" Binding="{Binding TotalAmount, StringFormat=C}" Width="100"/>
+            <DataGridTextColumn Header="Stato" Binding="{Binding Status}" Width="150"/>
+
+            <DataGridTemplateColumn Header="Azioni" Width="110">
+              <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Width="30" Height="30"
+                            Margin="3"
+                            Style="{StaticResource IconButtonStyle}"
+                            ToolTip="Modifica"
+                            Click="EditRow_Click">
+                      <Image Source="pack://application:,,,/Resources/edit_icon.png" Width="18" Height="18"/>
+                    </Button>
+                    <Button Width="30" Height="30"
+                            Margin="3"
+                            Style="{StaticResource IconButtonStyle}"
+                            ToolTip="Elimina"
+                            Click="DeleteRow_Click">
+                      <Image Source="pack://application:,,,/Resources/delete_icon.png" Width="18" Height="18"/>
+                    </Button>
+                  </StackPanel>
+                </DataTemplate>
+              </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+          </DataGrid.Columns>
+        </DataGrid>
+
+      </StackPanel>
+    </Border>
+  </Grid>
 </Page>

@@ -263,6 +263,97 @@
     </Setter>
   </Style>
 
+  <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+    <Border x:Name="Border"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="0"
+          Padding="4"
+          CornerRadius="0">
+      <Path x:Name="Arrow"
+          Fill="Goldenrod"
+          HorizontalAlignment="Right"
+          VerticalAlignment="Center"
+          Margin="0,0,6,0"
+          Data="M 0 0 L 4 4 L 8 0 Z"/>
+    </Border>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsMouseOver" Value="True">
+        <Setter TargetName="Arrow" Property="Fill" Value="SaddleBrown"/>
+      </Trigger>
+      <Trigger Property="IsChecked" Value="True">
+        <Setter TargetName="Arrow" Property="Fill" Value="#A67C00"/>
+      </Trigger>
+      <Trigger Property="IsEnabled" Value="False">
+        <Setter TargetName="Arrow" Property="Fill" Value="Gray"/>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <Style x:Key="ElegantComboBoxStyle" TargetType="ComboBox">
+    <Setter Property="Foreground" Value="#4B2E2B"/>
+    <Setter Property="FontFamily" Value="Palatino Linotype"/>
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Padding" Value="6"/>
+    <Setter Property="Background" Value="#FFFCF3E6"/>
+    <Setter Property="BorderBrush" Value="Goldenrod"/>
+    <Setter Property="BorderThickness" Value="1.5"/>
+    <Setter Property="Height" Value="36"/>
+    <Setter Property="SnapsToDevicePixels" Value="True"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ComboBox">
+          <Grid>
+            <ToggleButton Name="ToggleButton"
+                        Template="{StaticResource ComboBoxToggleButton}"
+                        Grid.Column="2"
+                        Focusable="False"
+                        IsChecked="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                        ClickMode="Press"/>
+            <ContentPresenter Name="ContentSite"
+                            IsHitTestVisible="False"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="6,3,28,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"/>
+            <Popup Name="Popup"
+                 Placement="Bottom"
+                 IsOpen="{TemplateBinding IsDropDownOpen}"
+                 AllowsTransparency="True"
+                 Focusable="False"
+                 PopupAnimation="Slide">
+              <Border SnapsToDevicePixels="True"
+                    Background="#FFFDF5F0"
+                    BorderBrush="Goldenrod"
+                    BorderThickness="1">
+                <ScrollViewer Margin="4"
+                            SnapsToDevicePixels="True">
+                  <StackPanel IsItemsHost="True"
+                            KeyboardNavigation.DirectionalNavigation="Contained"/>
+                </ScrollViewer>
+              </Border>
+            </Popup>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Foreground" Value="Gray"/>
+              <Setter Property="BorderBrush" Value="#D3C9C9"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="BorderBrush" Value="DarkGoldenrod"/>
+              <Setter Property="Background" Value="#FFF9F2D4"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+              <Setter Property="BorderBrush" Value="DarkGoldenrod"/>
+              <Setter Property="Background" Value="#FFF9F2D4"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
 
   <Style x:Key="IconButtonStyle" TargetType="Button">
     <Setter Property="Width" Value="32"/>

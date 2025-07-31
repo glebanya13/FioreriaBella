@@ -1,3 +1,4 @@
+using System.Windows;
 using System.Windows.Controls;
 
 namespace FioreriaBella.Pages
@@ -15,6 +16,21 @@ namespace FioreriaBella.Pages
       Email = email;
       Role = role;
       DataContext = this;
+    }
+
+    private void ExploreCatalog_Click(object sender, RoutedEventArgs e)
+    {
+      NavigationService?.Navigate(new CatalogPage());
+    }
+
+    private void Cart_Click(object sender, RoutedEventArgs e)
+    {
+      NavigationService?.Navigate(new CartPage());
+    }
+
+    private void Wishlist_Click(object sender, RoutedEventArgs e)
+    {
+      NavigationService?.Navigate(new WishlistPage());
     }
 
     private void Logout_Click(object sender, System.Windows.RoutedEventArgs e)
