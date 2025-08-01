@@ -35,6 +35,32 @@ namespace FioreriaBella.Data
       return products;
     }
 
+    public Product GetById(int id)
+    {
+      using var conn = _context.CreateConnection();
+      conn.Open();
+
+      var cmd = new SqlCommand("SELECT * FROM Products WHERE Id = @id", conn);
+      cmd.Parameters.AddWithValue("@id", id);
+
+      using var reader = cmd.ExecuteReader();
+      if (reader.Read())
+      {
+        return new Product
+        {
+          Id = (int)reader["Id"],
+          Name = reader["Name"].ToString(),
+          Description = reader["Description"].ToString(),
+          Price = (decimal)reader["Price"],
+          Stock = (int)reader["Stock"],
+          ImageUrl = reader["ImageUrl"].ToString()
+        };
+      }
+
+      return null;
+    }
+
+
     public void Add(Product product)
     {
       using var conn = _context.CreateConnection();

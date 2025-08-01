@@ -1,14 +1,73 @@
-﻿<Page x:Class="FioreriaBella.Pages.WishlistPage"
+<Page x:Class="FioreriaBella.Pages.WishlistPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FioreriaBella.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="WishlistPage">
 
-    <Grid>
-        
-    </Grid>
+  <Page.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Page.Resources>
+
+  <Grid>
+    <Border Padding="30"
+            BorderBrush="Goldenrod"
+            BorderThickness="2"
+            CornerRadius="12"
+            Margin="30"
+            Background="#FFFDF5F0"
+            SnapsToDevicePixels="True">
+
+      <StackPanel>
+
+        <Button Content="← Indietro"
+                Width="100"
+                Margin="0,0,0,15"
+                HorizontalAlignment="Left"
+                Style="{StaticResource ElegantButtonStyle}"
+                Click="Back_Click" />
+
+        <TextBlock Text="Lista Desideri"
+                   FontSize="26"
+                   FontFamily="Georgia"
+                   FontWeight="Bold"
+                   Foreground="DarkOliveGreen"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20" />
+
+        <DataGrid x:Name="WishlistGrid"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  IsReadOnly="True"
+                  RowHeight="70"
+                  ColumnHeaderHeight="30"
+                  Style="{StaticResource ElegantDataGridStyle}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50" />
+            <DataGridTextColumn Header="Prodotto" Binding="{Binding ProductName}" Width="*" />
+            <DataGridTextColumn Header="Data Aggiunta" Binding="{Binding AddedAt}" Width="150" />
+
+            <DataGridTemplateColumn Header="Azioni" Width="100">
+              <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                  <Button Width="30" Height="30"
+                          Style="{StaticResource IconButtonStyle}"
+                          ToolTip="Rimuovi"
+                          Click="Remove_Click">
+                    <Image Source="pack://application:,,,/Resources/delete_icon.png" Width="18" Height="18"/>
+                  </Button>
+                </DataTemplate>
+              </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+          </DataGrid.Columns>
+        </DataGrid>
+
+      </StackPanel>
+    </Border>
+  </Grid>
 </Page>

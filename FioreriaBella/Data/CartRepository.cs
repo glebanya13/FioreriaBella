@@ -57,6 +57,18 @@ namespace FioreriaBella.Data
       cmd.ExecuteNonQuery();
     }
 
+    public void UpdateQuantity(int cartItemId, int newQuantity)
+    {
+      using var conn = _context.CreateConnection();
+      conn.Open();
+
+      var cmd = new SqlCommand("UPDATE Cart SET Quantity = @q WHERE Id = @id", conn);
+      cmd.Parameters.AddWithValue("@q", newQuantity);
+      cmd.Parameters.AddWithValue("@id", cartItemId);
+
+      cmd.ExecuteNonQuery();
+    }
+
     public void Remove(int id)
     {
       using var conn = _context.CreateConnection();

@@ -6,5 +6,7 @@ namespace FioreriaBella.Models
     public int UserId { get; set; }
     public int ProductId { get; set; }
     public DateTime AddedAt { get; set; } = DateTime.Now;
+
+    public string ProductName { get; set; }
   }
 }

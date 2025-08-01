@@ -28,12 +28,12 @@ namespace FioreriaBella.Pages
 
     private void Cart_Click(object sender, RoutedEventArgs e)
     {
-      NavigationService?.Navigate(new CartPage());
+      NavigationService?.Navigate(new CartPage(UserId));
     }
 
     private void Wishlist_Click(object sender, RoutedEventArgs e)
     {
-      NavigationService?.Navigate(new WishlistPage());
+      NavigationService?.Navigate(new WishlistPage(UserId));
     }
 
     private void Logout_Click(object sender, System.Windows.RoutedEventArgs e)

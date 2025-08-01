@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\App.xaml
-151744460203
+16-1350724638
 
-37-1145912615
+381587200558
 2291587415447
-Dialogs\OrderDialog.xaml;Dialogs\ProductDialog.xaml;Dialogs\UserDialog.xaml;MainWindow.xaml;Pages\AdminPage.xaml;Pages\CartPage.xaml;Pages\CatalogPage.xaml;Pages\LoginPage.xaml;Pages\ManageOrdersPage.xaml;Pages\ManageProductsPage.xaml;Pages\ManageUsersPage.xaml;Pages\RegisterPage.xaml;Pages\UserPage.xaml;Pages\WishlistPage.xaml;Resources\Styles.xaml;
+Dialogs\OrderDialog.xaml;Dialogs\ProductDialog.xaml;Dialogs\UserDialog.xaml;MainWindow.xaml;Pages\AdminPage.xaml;Pages\CartPage.xaml;Pages\CatalogPage.xaml;Pages\LoginPage.xaml;Pages\ManageOrdersPage.xaml;Pages\ManageProductsPage.xaml;Pages\ManageUsersPage.xaml;Pages\OrderPage.xaml;Pages\RegisterPage.xaml;Pages\UserPage.xaml;Pages\WishlistPage.xaml;Resources\Styles.xaml;
 
-False
+True
 

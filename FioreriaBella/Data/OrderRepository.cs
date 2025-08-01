@@ -13,6 +13,22 @@ namespace FioreriaBella.Data
       _context = new FioreriaDbContext();
     }
 
+    public void Add(Order order)
+    {
+      using var conn = _context.CreateConnection();
+      conn.Open();
+
+      var cmd = new SqlCommand(
+          "INSERT INTO Orders (CustomerName, Address, OrderDate, TotalAmount, Status) VALUES (@n, @a, @d, @t, @s)", conn);
+      cmd.Parameters.AddWithValue("@n", order.CustomerName);
+      cmd.Parameters.AddWithValue("@a", order.Address);
+      cmd.Parameters.AddWithValue("@d", order.OrderDate);
+      cmd.Parameters.AddWithValue("@t", order.TotalAmount);
+      cmd.Parameters.AddWithValue("@s", order.Status);
+
+      cmd.ExecuteNonQuery();
+    }
+
     public List<Order> GetAll()
     {
       var orders = new List<Order>();
