@@ -1665,6 +1665,37 @@
             "rid": "win"
           }
         }
+      },
+      "FioreriaBella.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FioreriaBella.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.7"
+        },
+        "compile": {
+          "bin/placeholder/FioreriaBella.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FioreriaBella.DAL.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "FioreriaBella.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/FioreriaBella.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FioreriaBella.Models.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -4872,10 +4903,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "FioreriaBella.DAL/1.0.0": {
+      "type": "project",
+      "path": "../FioreriaBella.DAL/FioreriaBella.DAL.csproj",
+      "msbuildProject": "../FioreriaBella.DAL/FioreriaBella.DAL.csproj"
+    },
+    "FioreriaBella.Models/1.0.0": {
+      "type": "project",
+      "path": "../FioreriaBella.Models/FioreriaBella.Models.csproj",
+      "msbuildProject": "../FioreriaBella.Models/FioreriaBella.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "FioreriaBella.DAL >= 1.0.0",
+      "FioreriaBella.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.7",
       "System.Data.SqlClient >= 4.9.0"
@@ -4907,7 +4950,14 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\FioreriaBella.DAL.csproj": {
+              "projectPath": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\FioreriaBella.DAL.csproj"
+            },
+            "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\FioreriaBella.Models.csproj": {
+              "projectPath": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\FioreriaBella.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

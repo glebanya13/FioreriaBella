@@ -1,0 +1,90 @@
+<Window x:Class="FioreriaBella.MVVM.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:conv="clr-namespace:FioreriaBella.MVVM.Converters"
+        Title="Fioreria Bella"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#FFF8F0E3"
+        WindowState="Maximized">
+
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/FioreriaBella;component/MVVM/Resources/Styles.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+
+      <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Border BorderBrush="Goldenrod"
+          BorderThickness="4"
+          Background="#FFF8F0E3"
+          SnapsToDevicePixels="True">
+    <Grid>
+      <Image Source="pack://application:,,,/FioreriaBella;component/MVVM/Resources/Background.jpg"
+             Stretch="UniformToFill"
+             Opacity="0.8"
+             Panel.ZIndex="0"/>
+
+      <Grid Height="40"
+            Background="#FFEED6A0"
+            VerticalAlignment="Top"
+            MouseLeftButtonDown="Window_MouseLeftButtonDown"
+            Panel.ZIndex="2">
+        <TextBlock Text="Fioreria Bella"
+                   FontFamily="Georgia"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   Foreground="SaddleBrown"
+                   VerticalAlignment="Center"
+                   Margin="15,0,0,0"/>
+        <Button Content="×"
+                Width="40" Height="40"
+                Background="Transparent"
+                BorderThickness="0"
+                FontSize="18"
+                FontWeight="Bold"
+                Foreground="DarkRed"
+                Cursor="Hand"
+                Click="CloseButton_Click"
+                HorizontalAlignment="Right"/>
+      </Grid>
+
+      <Border Background="#FFF3E6BE"
+              Height="50"
+              VerticalAlignment="Top"
+              Margin="0,40,0,0"
+              Panel.ZIndex="2"
+              Visibility="{Binding IsNavigationVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+          <Button Content="Профиль"
+                  Width="120" Height="35"
+                  Margin="10,7"
+                  Style="{StaticResource NavButtonStyle}"
+                  Command="{Binding NavigateProfileCommand}"/>
+          <Button Content="Каталог"
+                  Width="120" Height="35"
+                  Margin="10,7"
+                  Style="{StaticResource NavButtonStyle}"
+                  Command="{Binding NavigateCatalogCommand}"/>
+          <Button Content="Выйти"
+                  Width="120" Height="35"
+                  Margin="10,7"
+                  Style="{StaticResource NavButtonStyle}"
+                  Command="{Binding ExitCommand}"/>
+        </StackPanel>
+      </Border>
+
+      <Frame x:Name="MainFrame"
+             Margin="0,90,0,0"
+             NavigationUIVisibility="Hidden"
+             Background="Transparent"
+             Panel.ZIndex="1"/>
+    </Grid>
+  </Border>
+</Window>

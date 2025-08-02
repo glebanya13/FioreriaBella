@@ -9,7 +9,8 @@ namespace FioreriaBella.DAL
     public ApplicationContext CreateDbContext(string[] args)
     {
       var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
-      optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ClickSnup;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True;");
+      optionsBuilder.UseSqlServer(
+                  "Data Source=(local);Initial Catalog=FioreriaBellaDB;Integrated Security=True;TrustServerCertificate=True");
 
       return new ApplicationContext(optionsBuilder.Options);
     }

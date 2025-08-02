@@ -1,0 +1,12 @@
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\bin\Debug\net8.0-windows\FioreriaBella.Models.deps.json
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\bin\Debug\net8.0-windows\FioreriaBella.Models.dll
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\bin\Debug\net8.0-windows\FioreriaBella.Models.pdb
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.AssemblyInfoInputs.cache
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.AssemblyInfo.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.csproj.CoreCompileInputs.cache
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.sourcelink.json
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.dll
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\refint\FioreriaBella.Models.dll
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\FioreriaBella.Models.pdb
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella.Models\obj\Debug\net8.0-windows\ref\FioreriaBella.Models.dll

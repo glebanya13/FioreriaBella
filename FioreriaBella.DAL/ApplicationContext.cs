@@ -1,10 +1,39 @@
 using Microsoft.EntityFrameworkCore;
 using FioreriaBella.Models.Entities;
+using FioreriaBella.DAL.Interfaces;
+using FioreriaBella.DAL.Repositories;
 
 namespace FioreriaBella.DAL
 {
   public class ApplicationContext : DbContext
   {
+    private static ApplicationContext _instance;
+    private static readonly object _lock = new object();
+    private IUnitOfWork _unitOfWork;
+
+    public static ApplicationContext Instance
+    {
+      get
+      {
+        if (_instance == null)
+        {
+          lock (_lock)
+          {
+            if (_instance == null)
+            {
+              var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+              optionsBuilder.UseSqlServer(
+                  "Data Source=(local);Initial Catalog=FioreriaBellaDB;Integrated Security=True;TrustServerCertificate=True");
+              _instance = new ApplicationContext(optionsBuilder.Options);
+            }
+          }
+        }
+        return _instance;
+      }
+    }
+
+    public IUnitOfWork UnitOfWork => _unitOfWork ??= new UnitOfWork(this);
+    public User CurrentUser { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
@@ -16,6 +45,10 @@ namespace FioreriaBella.DAL
     public DbSet<Payment> Payments { get; set; }
 
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+    {
+    }
+
+    private ApplicationContext() : base()
     {
       Database.EnsureCreated();
       AddAdminIfNeeded();

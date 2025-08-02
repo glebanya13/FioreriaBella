@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -6,14 +6,44 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+    <ApplicationIcon>MVVM\Resources\AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\AppIcon.ico" />
-    <None Remove="Resources\Background.jpg" />
-    <None Remove="Resources\delete_icon.png" />
-    <None Remove="Resources\edit_icon.png" />
+    <Compile Remove="MVVM\Views\AdminView.xaml.cs" />
+    <Compile Remove="MVVM\Views\CartView.xaml.cs" />
+    <Compile Remove="MVVM\Views\CatalogView.xaml.cs" />
+    <Compile Remove="MVVM\Views\Dialogs\OrderDialogView.xaml.cs" />
+    <Compile Remove="MVVM\Views\Dialogs\ProductDialogView.xaml.cs" />
+    <Compile Remove="MVVM\Views\Dialogs\UserDialogView.xaml.cs" />
+    <Compile Remove="MVVM\Views\ManageOrdersView.xaml.cs" />
+    <Compile Remove="MVVM\Views\ManageProductsView.xaml.cs" />
+    <Compile Remove="MVVM\Views\ManageUsersView.xaml.cs" />
+    <Compile Remove="MVVM\Views\OrderView.xaml.cs" />
+    <Compile Remove="MVVM\Views\UserView.xaml.cs" />
+    <Compile Remove="MVVM\Views\WishlistView.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MVVM\Resources\AppIcon.ico" />
+    <None Remove="MVVM\Resources\Background.jpg" />
+    <None Remove="MVVM\Resources\delete_icon.png" />
+    <None Remove="MVVM\Resources\edit_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MVVM\Views\AdminView.xaml" />
+    <Page Remove="MVVM\Views\CartView.xaml" />
+    <Page Remove="MVVM\Views\CatalogView.xaml" />
+    <Page Remove="MVVM\Views\Dialogs\OrderDialogView.xaml" />
+    <Page Remove="MVVM\Views\Dialogs\ProductDialogView.xaml" />
+    <Page Remove="MVVM\Views\Dialogs\UserDialogView.xaml" />
+    <Page Remove="MVVM\Views\ManageOrdersView.xaml" />
+    <Page Remove="MVVM\Views\ManageProductsView.xaml" />
+    <Page Remove="MVVM\Views\ManageUsersView.xaml" />
+    <Page Remove="MVVM\Views\OrderView.xaml" />
+    <Page Remove="MVVM\Views\UserView.xaml" />
+    <Page Remove="MVVM\Views\WishlistView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,18 +56,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\AppIcon.ico">
+    <Resource Include="MVVM\Resources\AppIcon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Background.jpg">
+    <Resource Include="MVVM\Resources\Background.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\delete_icon.png">
+    <Resource Include="MVVM\Resources\delete_icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\edit_icon.png">
+    <Resource Include="MVVM\Resources\edit_icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Views\Dialogs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FioreriaBella.DAL\FioreriaBella.DAL.csproj" />
+    <ProjectReference Include="..\FioreriaBella.Models\FioreriaBella.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MVVM\Views\MainWindow.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>
