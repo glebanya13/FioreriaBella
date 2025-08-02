@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\App.xaml
-4-863333484
+7872282159
 
-13706782235
+191390270448
 231-1007627991
-MVVM\Resources\Styles.xaml;MVVM\Views\LoginView.xaml;MVVM\Views\MainWindow.xaml;MVVM\Views\RegisterView.xaml;
+MVVM\Resources\Styles.xaml;MVVM\Views\AdminView.xaml;MVVM\Views\CatalogView.xaml;MVVM\Views\LoginView.xaml;MVVM\Views\MainWindow.xaml;MVVM\Views\RegisterView.xaml;MVVM\Views\UserView.xaml;
 
 False
 

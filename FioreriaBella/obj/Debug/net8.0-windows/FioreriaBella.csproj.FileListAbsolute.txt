@@ -140,12 +140,21 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\bin\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.csproj.AssemblyReference.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Resources\Styles.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\LoginView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\RegisterView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\UserView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\App.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\AdminView.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\CatalogView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\LoginView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MainWindow.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\RegisterView.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\UserView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella_MarkupCompile.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella_MarkupCompile.lref
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\AdminView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\CatalogView.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MainWindow.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.g.resources
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.GeneratedMSBuildEditorConfig.editorconfig
@@ -159,5 +168,3 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.pdb
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.genruntimeconfig.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\ref\FioreriaBella.dll
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\RegisterView.baml
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\RegisterView.g.cs

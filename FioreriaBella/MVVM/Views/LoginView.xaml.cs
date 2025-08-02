@@ -22,7 +22,14 @@ namespace FioreriaBella.MVVM.Views
 
       vm.LoginSuccess += () =>
       {
-        //this.NavigationService?.Navigate(new MainView(_userSessionService));
+        if (_userSessionService.CurrentUser?.IsAdmin == true)
+        {
+          NavigationService?.Navigate(new AdminView(_userSessionService, _unitOfWork));
+        }
+        else
+        {
+          NavigationService?.Navigate(new UserView(_userSessionService, _unitOfWork));
+        }
       };
 
       vm.RegisterRequested += () =>

@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MVVM\Views\AdminView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\CatalogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\LoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -14,6 +20,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\UserView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

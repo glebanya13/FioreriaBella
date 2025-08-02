@@ -4,14 +4,6 @@
       Title="RegisterPage"
       Background="Transparent">
 
-  <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/FioreriaBella;component/MVVM/Resources/Styles.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Page.Resources>
-
   <Grid>
     <Border Background="#FFFDF5F0"
             CornerRadius="20"

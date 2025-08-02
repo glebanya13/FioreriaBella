@@ -1,101 +1,37 @@
-using FioreriaBella.Data;
-using FioreriaBella.Models;
-using System;
+using FioreriaBella.DAL.Interfaces;
+using FioreriaBella.MVVM.Services;
+using FioreriaBella.MVVM.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FioreriaBella.Pages
+namespace FioreriaBella.MVVM.Views
 {
-  public partial class CatalogPage : Page
+  public partial class CatalogView : Page
   {
-    private readonly ProductRepository _repo;
-    private readonly CartRepository _cartRepo;
-    private readonly WishlistRepository _wishlistRepo;
+    private readonly UserSessionService _userSessionService;
+    private readonly IUnitOfWork _unitOfWork;
 
-    private readonly int _userId;
-    public CatalogPage(int userId)
+    public CatalogView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
       InitializeComponent();
 
-      _userId = userId;
+      _userSessionService = userSessionService;
+      _unitOfWork = unitOfWork;
 
-      _repo = new ProductRepository();
-      _cartRepo = new CartRepository();
-      _wishlistRepo = new WishlistRepository();
+      var vm = new CatalogViewModel(_unitOfWork, _userSessionService);
+      DataContext = vm;
 
-      LoadProducts();
-    }
+      vm.BackRequested += () => this.NavigationService?.GoBack();
 
-    private void LoadProducts()
-    {
-      ProductsList.ItemsSource = _repo.GetAll();
-    }
-
-    private void AddToCart_Click(object sender, RoutedEventArgs e)
-    {
-      if (sender is Button btn && btn.Tag is int productId)
+      vm.ProductAddedToCart += product =>
       {
-        try
-        {
-          var item = new CartItem
-          {
-            UserId = _userId,
-            ProductId = productId,
-            Quantity = 1,
-            AddedAt = DateTime.Now
-          };
+        MessageBox.Show($"Товар '{product.Name}' добавлен в корзину");
+      };
 
-          _cartRepo.Add(item);
-          MessageBox.Show($"Prodotto con ID {productId} aggiunto al carrello.");
-        }
-        catch (InvalidOperationException ex)
-        {
-          MessageBox.Show(ex.Message);
-        }
-        catch (Exception ex)
-        {
-          MessageBox.Show($"Errore durante l'aggiunta al carrello: {ex.Message}");
-        }
-      }
-    }
-
-    private void AddToWishlist_Click(object sender, RoutedEventArgs e)
-    {
-      if (sender is Button btn && btn.Tag is int productId)
+      vm.ProductAddedToWishlist += product =>
       {
-        try
-        {
-          var item = new WishlistItem
-          {
-            UserId = _userId,
-            ProductId = productId,
-            AddedAt = DateTime.Now
-          };
-
-          _wishlistRepo.Add(item);
-          MessageBox.Show($"Prodotto con ID {productId} aggiunto alla lista desideri.");
-        }
-        catch (InvalidOperationException ex)
-        {
-          MessageBox.Show(ex.Message);
-        }
-        catch (Exception ex)
-        {
-          MessageBox.Show($"Errore durante l'aggiunta alla lista desideri: {ex.Message}");
-        }
-      }
-    }
-
-    private void Back_Click(object sender, RoutedEventArgs e)
-    {
-      if (NavigationService != null && NavigationService.CanGoBack)
-      {
-        NavigationService.GoBack();
-      }
-      else
-      {
-        MessageBox.Show("Non è possibile tornare indietro.");
-      }
+        MessageBox.Show($"Товар '{product.Name}' добавлен в список желаемого");
+      };
     }
   }
 }

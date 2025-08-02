@@ -1,16 +1,8 @@
-<Page x:Class="FioreriaBella.Pages.UserPage"
+<Page x:Class="FioreriaBella.MVVM.Views.UserView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="UserPage"
       Background="Transparent">
-
-  <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Resources/Styles.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Page.Resources>
 
   <Grid Background="Transparent" Margin="20">
     <Border Background="#FFFDF5F0"
@@ -25,7 +17,7 @@
 
       <StackPanel>
 
-        <TextBlock Text="{Binding Username, StringFormat='Benvenuto, {0}!'}"
+        <TextBlock Text="{Binding Username, StringFormat='Добро пожаловать, {0}!'}"
                    FontSize="28"
                    FontFamily="Georgia"
                    FontWeight="Bold"
@@ -34,7 +26,7 @@
                    Margin="0,0,0,20"/>
 
         <StackPanel Margin="0,0,0,30">
-          <TextBlock Text="Dettagli account"
+          <TextBlock Text="Информация об аккаунте"
                      FontSize="18"
                      FontWeight="SemiBold"
                      Foreground="SaddleBrown"
@@ -46,7 +38,7 @@
               <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="Nome utente:"
+            <TextBlock Text="Имя пользователя:"
                        FontWeight="Bold"
                        Foreground="DarkOliveGreen"
                        Grid.Column="0"/>
@@ -65,22 +57,10 @@
                        Margin="0,25,0,0"
                        FontStyle="Italic"
                        VerticalAlignment="Top"/>
-
-            <TextBlock Text="Ruolo:"
-                       FontWeight="Bold"
-                       Foreground="DarkOliveGreen"
-                       Grid.Column="0"
-                       Margin="0,50,0,0"
-                       VerticalAlignment="Top"/>
-            <TextBlock Text="{Binding Role}"
-                       Grid.Column="1"
-                       Margin="0,50,0,0"
-                       FontStyle="Italic"
-                       VerticalAlignment="Top"/>
           </Grid>
         </StackPanel>
 
-        <TextBlock Text="Qui puoi esplorare il nostro catalogo di fiori freschi, gestire la tua lista dei desideri e visualizzare la tua cesta degli acquisti."
+        <TextBlock Text="Здесь вы можете управлять своей корзиной и списком желаемого."
                    FontSize="16"
                    FontFamily="Palatino Linotype"
                    Foreground="SaddleBrown"
@@ -88,34 +68,31 @@
                    TextWrapping="Wrap"
                    Margin="0,0,0,25"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-          <Button Content="Esplora Catalogo"
-            Style="{StaticResource ElegantButtonStyle}"
-            Width="140"
-            Height="38"
-            Margin="5,0"
-            Click="ExploreCatalog_Click"/>
-          <Button Content="Cesta"
-            Style="{StaticResource ElegantButtonStyle}"
-            Width="140"
-            Height="38"
-            Margin="5,0"
-            Click="Cart_Click"/>
-          <Button Content="Lista Desideri"
-            Style="{StaticResource ElegantButtonStyle}"
-            Width="140"
-            Height="38"
-            Margin="5,0"
-            Click="Wishlist_Click"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+          <Button Content="Корзина"
+                  Style="{StaticResource ElegantButtonStyle}"
+                  Width="140"
+                  Height="38"
+                  Margin="5,0"
+                  Command="{Binding OpenCartCommand}"/>
+
+          <Button Content="WishList"
+                  Style="{StaticResource ElegantButtonStyle}"
+                  Width="140"
+                  Height="38"
+                  Margin="5,0"
+                  Command="{Binding OpenWishlistCommand}"/>
+
         </StackPanel>
 
-        <Button Content="Esci"
+        <Button Content="Выйти"
                 Style="{StaticResource OutlinedButtonStyle}"
                 Width="140"
                 Height="38"
                 HorizontalAlignment="Center"
                 Margin="0,30,0,0"
-                Click="Logout_Click"/>
+                Command="{Binding LogoutCommand}"/>
       </StackPanel>
     </Border>
   </Grid>

@@ -4,6 +4,8 @@ using System.Windows.Input;
 using FioreriaBella.MVVM.Commands;
 using FioreriaBella.DAL.Interfaces;
 using FioreriaBella.MVVM.Services;
+using FioreriaBella.MVVM.Views;
+using System.Windows.Navigation;
 
 namespace FioreriaBella.MVVM.ViewModels
 {
@@ -38,12 +40,19 @@ namespace FioreriaBella.MVVM.ViewModels
 
     private void NavigateProfile()
     {
-      //MainFrame.Navigate(new Views.ProfileView(_userSessionService, _unitOfWork));
+      if (_userSessionService.CurrentUser?.IsAdmin == true)
+      {
+        MainFrame.Navigate(new AdminView(_userSessionService, _unitOfWork));
+      }
+      else
+      {
+        MainFrame.Navigate(new UserView(_userSessionService, _unitOfWork));
+      }
     }
 
     private void NavigateCatalog()
     {
-      //MainFrame.Navigate(new Views.ProductsView(_userSessionService, _unitOfWork));
+      MainFrame.Navigate(new Views.CatalogView(_userSessionService, _unitOfWork));
     }
 
     private void ExitApp()

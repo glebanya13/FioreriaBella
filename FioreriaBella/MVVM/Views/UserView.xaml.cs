@@ -1,44 +1,39 @@
-using FioreriaBella.Models;
-using System.Windows;
+using FioreriaBella.DAL.Interfaces;
+using FioreriaBella.MVVM.Services;
+using FioreriaBella.MVVM.ViewModels;
 using System.Windows.Controls;
 
-namespace FioreriaBella.Pages
+namespace FioreriaBella.MVVM.Views
 {
-  public partial class UserPage : Page
+  public partial class UserView : Page
   {
-    public string Username { get; set; }
-    public string Email { get; set; }
-    public string Role { get; set; }
-    public int UserId { get; set; }
+    private readonly UserSessionService _userSessionService;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public UserPage(string username, string email, string role, int userId)
+    public UserView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
       InitializeComponent();
-      Username = username;
-      Email = email;
-      Role = role;
-      UserId = userId;
-      DataContext = this;
-    }
 
-    private void ExploreCatalog_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new CatalogPage(UserId));
-    }
+      _userSessionService = userSessionService;
+      _unitOfWork = unitOfWork;
 
-    private void Cart_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new CartPage(UserId));
-    }
+      var vm = new UserViewModel(_userSessionService, _unitOfWork);
+      DataContext = vm;
 
-    private void Wishlist_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new WishlistPage(UserId));
-    }
+      vm.LogoutRequested += () =>
+      {
+        this.NavigationService?.Navigate(new LoginView(_userSessionService, _unitOfWork));
+      };
 
-    private void Logout_Click(object sender, System.Windows.RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new LoginPage());
+      vm.OpenCartRequested += () =>
+      {
+        // this.NavigationService?.Navigate(new CartView(...));
+      };
+
+      vm.OpenWishlistRequested += () =>
+      {
+        // this.NavigationService?.Navigate(new WishlistView(...));
+      };
     }
   }
 }

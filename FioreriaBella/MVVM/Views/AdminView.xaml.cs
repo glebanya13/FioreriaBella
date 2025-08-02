@@ -1,47 +1,51 @@
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
+using FioreriaBella.MVVM.ViewModels;
+using FioreriaBella.MVVM.Services;
+using FioreriaBella.DAL.Interfaces;
 
-namespace FioreriaBella.Pages
+namespace FioreriaBella.MVVM.Views
 {
-  public partial class AdminPage : Page
+  public partial class AdminView : Page
   {
-    private readonly string _username;
-    private readonly string _email;
+    private readonly UserSessionService _userSessionService;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public AdminPage(string username, string email)
+    public AdminView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
       InitializeComponent();
-      _username = username;
-      _email = email;
 
-      UsernameText.Text = $"Utente: {_username}";
-      EmailText.Text = $"Email: {_email}";
-    }
+      _userSessionService = userSessionService;
+      _unitOfWork = unitOfWork;
 
-    private void Logout_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new LoginPage());
-    }
+      if (userSessionService.CurrentUser == null)
+        throw new InvalidOperationException("CurrentUser is null. Нужно войти.");
 
-    private void ManageUsers_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new ManageUsersPage());
-    }
 
-    private void ManageOrders_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new ManageOrdersPage());
-    }
+      var vm = new AdminViewModel(_userSessionService, _unitOfWork);
+      DataContext = vm;
 
-    private void ManageProducts_Click(object sender, RoutedEventArgs e)
-    {
-      NavigationService?.Navigate(new ManageProductsPage());
-    }
-
-    private void Dashboard_Click(object sender, RoutedEventArgs e)
-    {
-      MessageBox.Show("Panoramica amministrativa", "Dashboard", MessageBoxButton.OK, MessageBoxImage.Information);
+      vm.RequestNavigateToUsers += () =>
+      {
+        //this.NavigationService?.Navigate(new UsersManagementView(_userSessionService, _unitOfWork));
+      };
+      vm.RequestNavigateToProducts += () =>
+      {
+        //this.NavigationService?.Navigate(new ProductsManagementView(_userSessionService, _unitOfWork));
+      };
+      vm.RequestNavigateToOrders += () =>
+      {
+        //this.NavigationService?.Navigate(new OrdersManagementView(_userSessionService, _unitOfWork));
+      };
+      vm.RequestNavigateToDashboard += () =>
+      {
+        //this.NavigationService?.Navigate(new DashboardView(_userSessionService, _unitOfWork));
+      };
+      vm.RequestLogout += () =>
+      {
+        _userSessionService.ClearUser();
+        this.NavigationService?.Navigate(new LoginView(_userSessionService, _unitOfWork));
+      };
     }
   }
+
 }

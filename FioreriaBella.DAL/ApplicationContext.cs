@@ -46,6 +46,8 @@ namespace FioreriaBella.DAL
 
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
     {
+      Database.EnsureCreated();
+      AddAdminIfNeeded();
     }
 
     private ApplicationContext() : base()

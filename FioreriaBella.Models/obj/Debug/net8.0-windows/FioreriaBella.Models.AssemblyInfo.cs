@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FioreriaBella.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f952ff295bbc023e4761025f0229d6223a4c132")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09fb86fd9f871d943276c497fa20c6300551dec2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FioreriaBella.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FioreriaBella.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

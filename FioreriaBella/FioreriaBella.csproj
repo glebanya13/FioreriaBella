@@ -10,9 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MVVM\Views\AdminView.xaml.cs" />
     <Compile Remove="MVVM\Views\CartView.xaml.cs" />
-    <Compile Remove="MVVM\Views\CatalogView.xaml.cs" />
     <Compile Remove="MVVM\Views\Dialogs\OrderDialogView.xaml.cs" />
     <Compile Remove="MVVM\Views\Dialogs\ProductDialogView.xaml.cs" />
     <Compile Remove="MVVM\Views\Dialogs\UserDialogView.xaml.cs" />
@@ -20,7 +18,6 @@
     <Compile Remove="MVVM\Views\ManageProductsView.xaml.cs" />
     <Compile Remove="MVVM\Views\ManageUsersView.xaml.cs" />
     <Compile Remove="MVVM\Views\OrderView.xaml.cs" />
-    <Compile Remove="MVVM\Views\UserView.xaml.cs" />
     <Compile Remove="MVVM\Views\WishlistView.xaml.cs" />
   </ItemGroup>
 
@@ -32,9 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="MVVM\Views\AdminView.xaml" />
     <Page Remove="MVVM\Views\CartView.xaml" />
-    <Page Remove="MVVM\Views\CatalogView.xaml" />
     <Page Remove="MVVM\Views\Dialogs\OrderDialogView.xaml" />
     <Page Remove="MVVM\Views\Dialogs\ProductDialogView.xaml" />
     <Page Remove="MVVM\Views\Dialogs\UserDialogView.xaml" />
@@ -42,7 +37,6 @@
     <Page Remove="MVVM\Views\ManageProductsView.xaml" />
     <Page Remove="MVVM\Views\ManageUsersView.xaml" />
     <Page Remove="MVVM\Views\OrderView.xaml" />
-    <Page Remove="MVVM\Views\UserView.xaml" />
     <Page Remove="MVVM\Views\WishlistView.xaml" />
   </ItemGroup>
 
