@@ -1,7 +1,7 @@
 <Page x:Class="FioreriaBella.MVVM.Views.UserView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Title="UserPage"
+      Title="User"
       Background="Transparent">
 
   <Grid Background="Transparent" Margin="20">

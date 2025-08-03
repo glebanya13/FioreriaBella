@@ -13,10 +13,22 @@
     <Page Update="MVVM\Views\CatalogView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\Dialogs\ProductDialogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\Dialogs\UserDialogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\LoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\ManageProductsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\ManageUsersView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\RegisterView.xaml">

@@ -1,77 +1,36 @@
-using FioreriaBella.Models;
-using System.Text.RegularExpressions;
+using FioreriaBella.Models.Entities;
+using FioreriaBella.MVVM.ViewModels;
 using System.Windows;
+using System.Windows.Controls;
 
-namespace FioreriaBella.Dialogs
+namespace FioreriaBella.MVVM.Views.Dialogs
 {
   public partial class UserDialog : Window
   {
-    public User User { get; private set; }
+    public User Result { get; private set; }
 
-    public UserDialog(User user)
+    public UserDialog(User? user = null)
     {
       InitializeComponent();
 
-      User = new User
+      var vm = new UserDialogViewModel(user);
+      vm.RequestClose += (success, result) =>
       {
-        Id = user.Id,
-        Username = user.Username ?? "",
-        Email = user.Email ?? "",
-        PasswordHash = user.PasswordHash ?? "",
-        Role = user.Role ?? ""
+        DialogResult = success;
+        if (success && result is User u)
+          Result = u;
+        Close();
       };
 
-      DataContext = User;
+      DataContext = vm;
     }
 
-    private void Save_Click(object sender, RoutedEventArgs e)
+    private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
     {
-      bool isValid = true;
-
-      UsernameError.Text = "";
-      EmailError.Text = "";
-      RoleError.Text = "";
-
-      if (string.IsNullOrWhiteSpace(UsernameTextBox.Text))
+      if (DataContext is UserDialogViewModel vm)
       {
-        UsernameError.Text = "Inserisci l'username.";
-        isValid = false;
+        vm.Password = ((PasswordBox)sender).Password;
       }
-
-      if (string.IsNullOrWhiteSpace(EmailTextBox.Text) || !IsValidEmail(EmailTextBox.Text))
-      {
-        EmailError.Text = "Inserisci una email valida.";
-        isValid = false;
-      }
-
-      if (string.IsNullOrWhiteSpace(RoleTextBox.Text))
-      {
-        RoleError.Text = "Inserisci il ruolo.";
-        isValid = false;
-      }
-
-      if (!isValid)
-        return;
-
-      User.Username = UsernameTextBox.Text.Trim();
-      User.Email = EmailTextBox.Text.Trim();
-      User.Role = RoleTextBox.Text.Trim();
-
-      DialogResult = true;
-    }
-
-    private bool IsValidEmail(string email)
-    {
-      if (string.IsNullOrWhiteSpace(email))
-        return false;
-
-      var regex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-      return regex.IsMatch(email);
-    }
-
-    private void Cancel_Click(object sender, RoutedEventArgs e)
-    {
-      DialogResult = false;
     }
   }
 }

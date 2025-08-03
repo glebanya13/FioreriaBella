@@ -1,67 +1,72 @@
-using FioreriaBella.Data;
-using FioreriaBella.Dialogs;
-using FioreriaBella.Models;
+using FioreriaBella.DAL.Interfaces;
+using FioreriaBella.MVVM.Services;
+using FioreriaBella.MVVM.ViewModels;
+using FioreriaBella.MVVM.Views.Dialogs;
+using FioreriaBella.Models.Entities;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FioreriaBella.Pages
+namespace FioreriaBella.MVVM.Views
 {
-  public partial class ManageUsersPage : Page
+  public partial class ManageUsersView : Page
   {
-    private readonly UserRepository _repo;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly UserSessionService _userSessionService;
+    private readonly ManageUsersViewModel _viewModel;
 
-    public ManageUsersPage()
+    public ManageUsersView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
       InitializeComponent();
-      _repo = new UserRepository();
-      LoadUsers();
-    }
 
-    private void LoadUsers()
-    {
-      UsersGrid.ItemsSource = _repo.GetAll();
-    }
+      _unitOfWork = unitOfWork;
+      _userSessionService = userSessionService;
 
-    private void EditRow_Click(object sender, RoutedEventArgs e)
-    {
-      if (((FrameworkElement)sender).DataContext is User selectedUser)
+      _viewModel = new ManageUsersViewModel(_unitOfWork);
+      DataContext = _viewModel;
+
+      _viewModel.RequestAddUser += () =>
       {
-        var dialog = new UserDialog(selectedUser);
-        if (dialog.ShowDialog() == true)
+        var dialog = new UserDialog();
+        if (dialog.ShowDialog() == true && dialog.Result is User newUser)
         {
-          _repo.Update(dialog.User);
-          LoadUsers();
+          _unitOfWork.Users.Add(newUser);
+          _unitOfWork.SaveChanges();
+          _viewModel.Users.Add(newUser);
         }
-      }
-    }
+      };
 
-    private void DeleteRow_Click(object sender, RoutedEventArgs e)
-    {
-      if (((FrameworkElement)sender).DataContext is User selectedUser)
+      _viewModel.RequestEditUser += user =>
       {
-        var result = MessageBox.Show($"Vuoi eliminare l'utente \"{selectedUser.Username}\"?",
-                                     "Conferma eliminazione",
-                                     MessageBoxButton.YesNo,
-                                     MessageBoxImage.Warning);
-
-        if (result == MessageBoxResult.Yes)
+        if (user != null)
         {
-          _repo.Delete(selectedUser.Id);
-          LoadUsers();
-        }
-      }
-    }
+          var dialog = new UserDialog(user);
+          if (dialog.ShowDialog() == true && dialog.Result is User updatedUser)
+          {
+            user.Username = updatedUser.Username;
+            user.Email = updatedUser.Email;
+            user.IsAdmin = updatedUser.IsAdmin;
 
-    private void Back_Click(object sender, RoutedEventArgs e)
-    {
-      if (this.NavigationService != null && this.NavigationService.CanGoBack)
+            _unitOfWork.Users.Update(user);
+            _unitOfWork.SaveChanges();
+          }
+        }
+      };
+
+      _viewModel.RequestDeleteUser += user =>
       {
-        this.NavigationService.GoBack();
-      }
-      else
+        if (user != null &&
+            MessageBox.Show($"Вы действительно хотите удалить пользователя «{user.Username}»?", "Подтверждение удаления", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+        {
+          _unitOfWork.Users.Remove(user);
+          _unitOfWork.SaveChanges();
+          _viewModel.Users.Remove(user);
+        }
+      };
+
+      _viewModel.RequestBack += () =>
       {
-        MessageBox.Show("Non è possibile tornare indietro.");
-      }
+        this.NavigationService?.GoBack();
+      };
     }
   }
 }

@@ -8,7 +8,6 @@ namespace FioreriaBella.DAL.Repositories
     private readonly ApplicationContext _context;
 
     private IRepository<Product> _products;
-    private IRepository<Category> _categories;
     private IRepository<User> _users;
     private IRepository<Cart> _carts;
     private IRepository<Order> _orders;
@@ -23,7 +22,6 @@ namespace FioreriaBella.DAL.Repositories
     }
 
     public IRepository<Product> Products => _products ??= new Repository<Product>(_context);
-    public IRepository<Category> Categories => _categories ??= new Repository<Category>(_context);
     public IRepository<User> Users => _users ??= new Repository<User>(_context);
     public IRepository<Cart> Carts => _carts ??= new Repository<Cart>(_context);
     public IRepository<Order> Orders => _orders ??= new Repository<Order>(_context);

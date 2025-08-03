@@ -1,59 +1,52 @@
-<Page x:Class="FioreriaBella.Pages.ManageProductsPage"
+<Page x:Class="FioreriaBella.MVVM.Views.ManageProductsView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:local="clr-namespace:FioreriaBella.Pages"
-      xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
-      Title="Gestione Prodotti">
+      Title="ManageProducts">
 
-  <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Resources/Styles.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Page.Resources>
-
-  <Grid>
+  <Grid Background="Transparent">
     <Border Padding="30"
             BorderBrush="Goldenrod"
             BorderThickness="2"
-            CornerRadius="12"
-            Margin="30"
+            CornerRadius="16"
+            Width="820"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Background="#FFFDF5F0"
             SnapsToDevicePixels="True">
 
       <StackPanel>
 
-        <Button Content="← Indietro"
+        <Button Content="← Назад"
+                Command="{Binding BackCommand}"
+                Style="{StaticResource ElegantButtonStyle}"
                 Width="100"
                 Margin="0,0,0,15"
-                HorizontalAlignment="Left"
-                Style="{StaticResource ElegantButtonStyle}"
-                Click="Back_Click"/>
+                HorizontalAlignment="Left" />
 
-        <TextBlock Text="Gestione Prodotti"
-                   FontSize="26"
-                   FontFamily="Georgia"
+        <TextBlock Text="Управление товарами"
+                   FontSize="24"
                    FontWeight="Bold"
+                   FontFamily="Georgia"
                    Foreground="DarkOliveGreen"
                    HorizontalAlignment="Center"
                    Margin="0,0,0,20"/>
 
-        <Button Content="＋ Aggiungi nuovo prodotto"
+        <Button Content="＋ Новый товар"
+                Command="{Binding AddCommand}"
                 Style="{StaticResource ElegantButtonStyle}"
-                HorizontalAlignment="Left"
-                Width="220"
+                Width="150"
                 Margin="0,0,0,15"
-                Click="Add_Click"/>
+                HorizontalAlignment="Left" />
 
         <DataGrid x:Name="ProductsGrid"
+                  ItemsSource="{Binding Products}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   SelectionMode="Single"
                   SelectionUnit="Cell"
                   HeadersVisibility="Column"
-                  RowHeight="90"
-                  ColumnHeaderHeight="35"
+                  RowHeight="80"
+                  ColumnHeaderHeight="30"
                   Margin="0,0,0,10"
                   Style="{StaticResource ElegantDataGridStyle}">
 
@@ -62,51 +55,47 @@
             <DataGridTemplateColumn Header="ID" Width="50">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <Border IsHitTestVisible="False">
-                    <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                  </Border>
+                  <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Nome" Width="144">
+            <DataGridTemplateColumn Header="Название" Width="130">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <Border IsHitTestVisible="False">
-                    <TextBlock Text="{Binding Name}" 
-                               TextWrapping="Wrap"
-                               TextTrimming="CharacterEllipsis"
-                               FontFamily="Palatino Linotype"
-                               Padding="4"
-                               Foreground="#4B2E2B"/>
-                  </Border>
+                  <TextBlock Text="{Binding Name}" 
+                             TextWrapping="Wrap"
+                             FontFamily="Palatino Linotype"
+                             Padding="4"
+                             Foreground="#4B2E2B"/>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Descrizione" Width="180">
+            <DataGridTemplateColumn Header="Описание" Width="180">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <Border IsHitTestVisible="False">
-                    <TextBlock Text="{Binding Description}"
-                               TextWrapping="Wrap"
-                               TextTrimming="CharacterEllipsis"
-                               FontFamily="Palatino Linotype"
-                               Foreground="#4B2E2B"
-                               Padding="4"/>
-                  </Border>
+                  <TextBlock Text="{Binding Description}"
+                             TextWrapping="Wrap"
+                             FontFamily="Palatino Linotype"
+                             Foreground="#4B2E2B"
+                             Padding="4"/>
                 </DataTemplate>
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
 
-            <DataGridTextColumn Header="Prezzo" Binding="{Binding Price}" Width="90"/>
-            <DataGridTextColumn Header="Quantità" Binding="{Binding Stock}" Width="90"/>
+            <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="80"/>
+            <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="100"/>
 
-            <DataGridTemplateColumn Header="Immagine" Width="100">
+            <DataGridTemplateColumn Header="Изображение" Width="120">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                  <Border IsHitTestVisible="False" Width="60" Height="60" BorderBrush="Goldenrod" BorderThickness="1" CornerRadius="4">
-                    <Image Source="{Binding ImageUrl}"
+                  <Border Width="60" Height="60"
+                          BorderBrush="Goldenrod"
+                          BorderThickness="1"
+                          CornerRadius="4"
+                          Background="#FFF">
+                    <Image Source="{Binding Picture}"
                            Stretch="UniformToFill"
                            ClipToBounds="True"
                            Width="60" Height="60"/>
@@ -115,23 +104,26 @@
               </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Azioni" Width="110">
+            <DataGridTemplateColumn Header="Действия" Width="100">
               <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
                   <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Width="30" Height="30"
                             Margin="3"
                             Style="{StaticResource IconButtonStyle}"
-                            ToolTip="Modifica"
-                            Click="EditRow_Click">
-                      <Image Source="pack://application:,,,/Resources/edit_icon.png" Width="18" Height="18"/>
+                            ToolTip="Редактировать"
+                            Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}">
+                      <Image Source="pack://application:,,,/MVVM/Resources/edit_icon.png" Width="18" Height="18"/>
                     </Button>
+
                     <Button Width="30" Height="30"
                             Margin="3"
                             Style="{StaticResource IconButtonStyle}"
-                            ToolTip="Elimina"
-                            Click="DeleteRow_Click">
-                      <Image Source="pack://application:,,,/Resources/delete_icon.png" Width="18" Height="18"/>
+                            ToolTip="Удалить"
+                            Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}">
+                      <Image Source="pack://application:,,,/MVVM/Resources/delete_icon.png" Width="18" Height="18"/>
                     </Button>
                   </StackPanel>
                 </DataTemplate>

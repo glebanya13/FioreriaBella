@@ -17,28 +17,20 @@ namespace FioreriaBella.MVVM.Views
       _userSessionService = userSessionService;
       _unitOfWork = unitOfWork;
 
-      if (userSessionService.CurrentUser == null)
-        throw new InvalidOperationException("CurrentUser is null. Нужно войти.");
-
-
       var vm = new AdminViewModel(_userSessionService, _unitOfWork);
       DataContext = vm;
 
       vm.RequestNavigateToUsers += () =>
       {
-        //this.NavigationService?.Navigate(new UsersManagementView(_userSessionService, _unitOfWork));
+        this.NavigationService?.Navigate(new ManageUsersView(_userSessionService, _unitOfWork));
       };
       vm.RequestNavigateToProducts += () =>
       {
-        //this.NavigationService?.Navigate(new ProductsManagementView(_userSessionService, _unitOfWork));
+        this.NavigationService?.Navigate(new ManageProductsView(_userSessionService, _unitOfWork));
       };
       vm.RequestNavigateToOrders += () =>
       {
         //this.NavigationService?.Navigate(new OrdersManagementView(_userSessionService, _unitOfWork));
-      };
-      vm.RequestNavigateToDashboard += () =>
-      {
-        //this.NavigationService?.Navigate(new DashboardView(_userSessionService, _unitOfWork));
       };
       vm.RequestLogout += () =>
       {

@@ -1,78 +1,73 @@
-using FioreriaBella.Data;
-using FioreriaBella.Dialogs;
-using FioreriaBella.Models;
+using FioreriaBella.DAL.Interfaces;
+using FioreriaBella.MVVM.Services;
+using FioreriaBella.MVVM.ViewModels;
+using FioreriaBella.MVVM.Views.Dialogs;
+using FioreriaBella.Models.Entities;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FioreriaBella.Pages
+namespace FioreriaBella.MVVM.Views
 {
-  public partial class ManageProductsPage : Page
+  public partial class ManageProductsView : Page
   {
-    private readonly ProductRepository _repo;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly UserSessionService _userSessionService;
+    private readonly ManageProductsViewModel _viewModel;
 
-    public ManageProductsPage()
+    public ManageProductsView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
       InitializeComponent();
-      _repo = new ProductRepository();
-      LoadProducts();
-    }
 
-    private void LoadProducts()
-    {
-      ProductsGrid.ItemsSource = _repo.GetAll();
-    }
+      _unitOfWork = unitOfWork;
+      _userSessionService = userSessionService;
 
-    private void Add_Click(object sender, RoutedEventArgs e)
-    {
-      var dialog = new ProductDialog();
-      if (dialog.ShowDialog() == true)
+      _viewModel = new ManageProductsViewModel(_unitOfWork);
+      DataContext = _viewModel;
+
+      _viewModel.RequestAddProduct += () =>
       {
-        _repo.Add(dialog.Product);
-        LoadProducts();
-      }
-    }
-
-    private void EditRow_Click(object sender, RoutedEventArgs e)
-    {
-      if (((FrameworkElement)sender).DataContext is Product selectedProduct)
-      {
-        var dialog = new ProductDialog(selectedProduct);
-        if (dialog.ShowDialog() == true)
+        var dialog = new ProductDialog();
+        if (dialog.ShowDialog() == true && dialog.Result is Product newProduct)
         {
-          _repo.Update(dialog.Product);
-          LoadProducts();
+          _unitOfWork.Products.Add(newProduct);
+          _unitOfWork.SaveChanges();
+          _viewModel.Products.Add(newProduct);
         }
-      }
-    }
+      };
 
-    private void DeleteRow_Click(object sender, RoutedEventArgs e)
-    {
-      if (((FrameworkElement)sender).DataContext is Product selectedProduct)
+      _viewModel.RequestEditProduct += product =>
       {
-        var result = MessageBox.Show($"Vuoi eliminare il prodotto \"{selectedProduct.Name}\"?",
-                                     "Conferma eliminazione",
-                                     MessageBoxButton.YesNo,
-                                     MessageBoxImage.Warning);
-
-        if (result == MessageBoxResult.Yes)
+        if (product != null)
         {
-          _repo.Delete(selectedProduct.Id);
-          LoadProducts();
+          var dialog = new ProductDialog(product);
+          if (dialog.ShowDialog() == true && dialog.Result is Product updatedProduct)
+          {
+            product.Name = updatedProduct.Name;
+            product.Description = updatedProduct.Description;
+            product.Price = updatedProduct.Price;
+            product.Quantity = updatedProduct.Quantity;
+            product.Picture = updatedProduct.Picture;
+
+            _unitOfWork.Products.Update(product);
+            _unitOfWork.SaveChanges();
+          }
         }
-      }
-    }
+      };
 
-    private void Back_Click(object sender, RoutedEventArgs e)
-    {
-      if (this.NavigationService != null && this.NavigationService.CanGoBack)
+      _viewModel.RequestDeleteProduct += product =>
       {
-        this.NavigationService.GoBack();
-      }
-      else
-      {
-        MessageBox.Show("Non è possibile tornare indietro.");
-      }
-    }
+        if (product != null && MessageBox.Show($"Удалить товар \"{product.Name}\"?", "Подтверждение", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+        {
+          _unitOfWork.Products.Remove(product);
+          _unitOfWork.SaveChanges();
+          _viewModel.Products.Remove(product);
+        }
+      };
 
+      _viewModel.RequestBack += () =>
+      {
+        this.NavigationService?.GoBack();
+      };
+    }
   }
 }
