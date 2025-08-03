@@ -35,7 +35,6 @@ namespace FioreriaBella.DAL
     public IUnitOfWork UnitOfWork => _unitOfWork ??= new UnitOfWork(this);
     public User CurrentUser { get; set; }
     public DbSet<User> Users { get; set; }
-    public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Cart> Carts { get; set; }
     public DbSet<Order> Orders { get; set; }
@@ -72,20 +71,12 @@ namespace FioreriaBella.DAL
         entity.HasMany(u => u.Addresses).WithOne(a => a.User).HasForeignKey(a => a.UserId).OnDelete(DeleteBehavior.Cascade);
       });
 
-      modelBuilder.Entity<Category>(entity =>
-      {
-        entity.HasKey(c => c.Id);
-        entity.Property(c => c.Name).IsRequired().HasMaxLength(100);
-        entity.HasMany(c => c.Products).WithOne(p => p.Category).HasForeignKey(p => p.CategoryId).OnDelete(DeleteBehavior.SetNull);
-      });
-
       modelBuilder.Entity<Product>(entity =>
       {
         entity.HasKey(p => p.Id);
         entity.Property(p => p.Name).IsRequired().HasMaxLength(100);
         entity.Property(p => p.Description).HasMaxLength(1000);
         entity.Property(p => p.Price).IsRequired();
-        entity.Property(p => p.Rating).IsRequired().HasDefaultValue(0);
         entity.Property(p => p.Quantity).IsRequired();
         entity.Property(p => p.Picture).HasMaxLength(500);
 
@@ -118,7 +109,6 @@ namespace FioreriaBella.DAL
       modelBuilder.Entity<ProductReview>(entity =>
       {
         entity.HasKey(r => r.Id);
-        entity.Property(r => r.Rating).IsRequired();
         entity.Property(r => r.Comment).HasMaxLength(1000);
         entity.Property(r => r.CreatedAt).IsRequired().HasDefaultValueSql("GETDATE()");
       });

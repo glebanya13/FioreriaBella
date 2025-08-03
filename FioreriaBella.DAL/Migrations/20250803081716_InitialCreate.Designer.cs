@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FioreriaBella.DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250802151855_InitialCreate")]
+    [Migration("20250803081716_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -88,24 +88,6 @@ namespace FioreriaBella.DAL.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Carts");
-                });
-
-            modelBuilder.Entity("FioreriaBella.Models.Entities.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("FioreriaBella.Models.Entities.Order", b =>
@@ -205,9 +187,6 @@ namespace FioreriaBella.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
@@ -227,14 +206,7 @@ namespace FioreriaBella.DAL.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<float>("Rating")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("real")
-                        .HasDefaultValue(0f);
-
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
@@ -257,9 +229,6 @@ namespace FioreriaBella.DAL.Migrations
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Rating")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
@@ -386,16 +355,6 @@ namespace FioreriaBella.DAL.Migrations
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("FioreriaBella.Models.Entities.Product", b =>
-                {
-                    b.HasOne("FioreriaBella.Models.Entities.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("Category");
-                });
-
             modelBuilder.Entity("FioreriaBella.Models.Entities.ProductReview", b =>
                 {
                     b.HasOne("FioreriaBella.Models.Entities.Product", "Product")
@@ -413,11 +372,6 @@ namespace FioreriaBella.DAL.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("FioreriaBella.Models.Entities.Category", b =>
-                {
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("FioreriaBella.Models.Entities.Order", b =>

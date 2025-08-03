@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FioreriaBella.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09fb86fd9f871d943276c497fa20c6300551dec2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d3c4e196bb5cb93a8a411db4150aac213d01522")]
 [assembly: System.Reflection.AssemblyProductAttribute("FioreriaBella.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FioreriaBella.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
