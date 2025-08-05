@@ -1,5 +1,3 @@
-using System;
-
 namespace FioreriaBella.Models.Entities
 {
   public class Order
@@ -12,5 +10,16 @@ namespace FioreriaBella.Models.Entities
     public User? User { get; set; }
     public ICollection<OrderItem>? OrderItems { get; set; }
     public ICollection<Payment>? Payments { get; set; }
+
+    public decimal TotalAmount
+    {
+      get
+      {
+        if (OrderItems == null) return 0;
+        return OrderItems.Sum(item => (item.Product?.Price ?? 0) * item.Quantity);
+      }
+    }
+
+    public string CustomerName => User?.Username ?? $"ID {UserId}";
   }
 }

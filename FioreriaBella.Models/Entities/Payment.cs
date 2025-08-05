@@ -1,5 +1,3 @@
-using System;
-
 namespace FioreriaBella.Models.Entities
 {
   public class Payment

@@ -1,42 +1,30 @@
-using FioreriaBella.Models;
+using FioreriaBella.Models.Entities;
+using FioreriaBella.MVVM.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
 
-namespace FioreriaBella.Dialogs
+namespace FioreriaBella.MVVM.Views.Dialogs
 {
   public partial class OrderDialog : Window
   {
     public Order Order { get; private set; }
 
-    public OrderDialog(Order order)
+    public OrderDialog(Order existingOrder)
     {
       InitializeComponent();
 
-      Order = new Order
+      var vm = new OrderDialogViewModel(existingOrder);
+      vm.RequestClose += (success, result) =>
       {
-        Id = order.Id,
-        CustomerName = order.CustomerName,
-        Address = order.Address,
-        OrderDate = order.OrderDate,
-        TotalAmount = order.TotalAmount,
-        Status = order.Status
+        DialogResult = success;
+        if (success && result != null)
+        {
+          Order = result;
+        }
+
+        Close();
       };
 
-      DataContext = Order;
-    }
-
-    private void Save_Click(object sender, RoutedEventArgs e)
-    {
-      if (StatusComboBox.SelectedItem is ComboBoxItem selectedItem)
-      {
-        Order.Status = selectedItem.Content.ToString();
-        DialogResult = true;
-      }
-    }
-
-    private void Cancel_Click(object sender, RoutedEventArgs e)
-    {
-      DialogResult = false;
+      DataContext = vm;
     }
   }
 }

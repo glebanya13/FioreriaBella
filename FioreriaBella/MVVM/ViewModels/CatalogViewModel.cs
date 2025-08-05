@@ -12,15 +12,36 @@ namespace FioreriaBella.MVVM.ViewModels
     private readonly IUnitOfWork _unitOfWork;
     private readonly UserSessionService _userSessionService;
 
-    public ObservableCollection<Product> Products { get; }
+    private string _searchText = "";
+    public string SearchText
+    {
+      get => _searchText;
+      set
+      {
+        if (SetProperty(ref _searchText, value))
+          ApplyFilters();
+      }
+    }
+
+    private string _selectedSortOption = "Без сортировки";
+    public string SelectedSortOption
+    {
+      get => _selectedSortOption;
+      set
+      {
+        if (SetProperty(ref _selectedSortOption, value))
+          ApplyFilters();
+      }
+    }
+
+    public ObservableCollection<Product> Products { get; } = new();
+    private List<Product> _allProducts = new();
 
     public ICommand AddToCartCommand { get; }
-    public ICommand AddToWishlistCommand { get; }
     public ICommand BackCommand { get; }
 
     public event Action BackRequested;
     public event Action<Product> ProductAddedToCart;
-    public event Action<Product> ProductAddedToWishlist;
 
     public CatalogViewModel()
     {
@@ -32,10 +53,10 @@ namespace FioreriaBella.MVVM.ViewModels
       _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
       _userSessionService = userSessionService ?? throw new ArgumentNullException(nameof(userSessionService));
 
-      Products = new ObservableCollection<Product>(_unitOfWork.Products.GetAll().ToList());
+      _allProducts = _unitOfWork.Products.GetAll().ToList();
+      ApplyFilters();
 
       AddToCartCommand = new RelayCommand(AddToCart);
-      AddToWishlistCommand = new RelayCommand(AddToWishlist);
       BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
     }
 
@@ -47,12 +68,28 @@ namespace FioreriaBella.MVVM.ViewModels
       }
     }
 
-    private void AddToWishlist(object parameter)
+    private void ApplyFilters()
     {
-      if (parameter is Product product)
+      var filtered = _allProducts.AsEnumerable();
+
+      if (!string.IsNullOrWhiteSpace(SearchText))
       {
-        ProductAddedToWishlist?.Invoke(product);
+        string term = SearchText.ToLower();
+        filtered = filtered.Where(p =>
+          (p.Name?.ToLower().Contains(term) ?? false) ||
+          (p.Description?.ToLower().Contains(term) ?? false));
       }
+
+      filtered = SelectedSortOption switch
+      {
+        "Цена ↑" => filtered.OrderBy(p => p.Price),
+        "Цена ↓" => filtered.OrderByDescending(p => p.Price),
+        _ => filtered
+      };
+
+      Products.Clear();
+      foreach (var p in filtered)
+        Products.Add(p);
     }
   }
 }

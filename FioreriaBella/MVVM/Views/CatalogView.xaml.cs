@@ -27,11 +27,6 @@ namespace FioreriaBella.MVVM.Views
       {
         MessageBox.Show($"Товар '{product.Name}' добавлен в корзину");
       };
-
-      vm.ProductAddedToWishlist += product =>
-      {
-        MessageBox.Show($"Товар '{product.Name}' добавлен в список желаемого");
-      };
     }
   }
 }

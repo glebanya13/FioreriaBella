@@ -3,28 +3,25 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:vm="clr-namespace:FioreriaBella.MVVM.ViewModels"
       Title="Catalogo">
-
-  <Page.DataContext>
-    <vm:CatalogViewModel />
-  </Page.DataContext>
-
-  <Grid>
+  <Grid Background="Transparent" Margin="20">
     <Border Padding="20"
             BorderBrush="DarkOliveGreen"
             BorderThickness="2"
             CornerRadius="12"
             Margin="30"
             Background="#FFFDF5F0"
-            SnapsToDevicePixels="True">
+            SnapsToDevicePixels="True"
+            Width="600"
+            Opacity="0.97">
 
       <StackPanel>
 
-        <Button Content="← Indietro"
+        <Button Content="← Назад"
                 Width="100"
                 Margin="0,0,0,15"
                 HorizontalAlignment="Left"
                 Style="{StaticResource ElegantButtonStyle}"
-                Command="{Binding BackCommand}"/>
+                Command="{Binding BackCommand}" />
 
         <TextBlock Text="Catalogo Fiori Freschi"
                    FontSize="26"
@@ -32,19 +29,43 @@
                    FontWeight="Bold"
                    Foreground="DarkOliveGreen"
                    HorizontalAlignment="Center"
-                   Margin="0,0,0,20"/>
+                   Margin="0,0,0,10" />
 
-        <TextBlock Text="Sfoglia la nostra selezione di fiori freschi e piante."
+        <TextBlock Text="Просмотрите наш выбор свежих цветов и растений."
                    FontSize="16"
                    FontFamily="Palatino Linotype"
                    Foreground="SaddleBrown"
                    TextWrapping="Wrap"
-                   Margin="0,0,0,20"/>
+                   TextAlignment="Center"
+                   Margin="0,0,0,20" />
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto"
-                      HorizontalScrollBarVisibility="Disabled">
-          <ItemsControl ItemsSource="{Binding Products}"
-                        HorizontalAlignment="Stretch">
+        <Grid Margin="0,0,0,20">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="2*" />
+          </Grid.ColumnDefinitions>
+
+          <TextBox Grid.Column="0"
+                   Margin="0,0,15,0"
+                   FontSize="13"
+                   VerticalContentAlignment="Center"
+                   Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                   Style="{StaticResource ElegantInputStyle}"
+                   Tag="Поиск..."
+                   HorizontalAlignment="Stretch" />
+
+          <ComboBox Grid.Column="1"
+                    Style="{StaticResource ElegantComboBoxStyle}"
+                    SelectedItem="{Binding SelectedSortOption, UpdateSourceTrigger=PropertyChanged}"
+                    HorizontalAlignment="Stretch">
+            <ComboBoxItem Content="Без сортировки" />
+            <ComboBoxItem Content="Цена ↑" />
+            <ComboBoxItem Content="Цена ↓" />
+          </ComboBox>
+        </Grid>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="450">
+          <ItemsControl ItemsSource="{Binding Products}">
             <ItemsControl.ItemsPanel>
               <ItemsPanelTemplate>
                 <WrapPanel Orientation="Horizontal" />
@@ -53,52 +74,72 @@
 
             <ItemsControl.ItemTemplate>
               <DataTemplate>
-                <Border BorderBrush="Goldenrod" BorderThickness="1" CornerRadius="8" Padding="10" Margin="8" Background="White" MinWidth="200" MaxWidth="220">
-                  <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                <Border BorderBrush="Goldenrod"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="10"
+                        Margin="10"
+                        Background="White"
+                        MinWidth="220"
+                        MaxWidth="220"
+                        Width="220">
+                  <Border.Effect>
+                    <DropShadowEffect Color="Black" Opacity="0.15" ShadowDepth="2" BlurRadius="4"/>
+                  </Border.Effect>
+                  <Border.Style>
+                    <Style TargetType="Border">
+                      <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                          <Setter Property="Background" Value="#FFFAF2E7" />
+                          <Setter Property="BorderBrush" Value="DarkGoldenrod" />
+                        </Trigger>
+                      </Style.Triggers>
+                    </Style>
+                  </Border.Style>
 
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                      <Image Source="{Binding ImageUrl}" Width="60" Height="60" Margin="0,0,10,0"/>
-                      <StackPanel Width="130">
-                        <TextBlock Text="{Binding Name}" 
-                                   FontWeight="Bold" FontSize="14" Foreground="#4B2E2B"
-                                   TextTrimming="CharacterEllipsis" 
-                                   TextWrapping="NoWrap" />
-                        <TextBlock Text="{Binding Price, StringFormat=€{0:F2}}" 
-                                   FontWeight="SemiBold" Foreground="DarkOliveGreen" Margin="0,5,0,0"/>
-                      </StackPanel>
-                    </StackPanel>
+                  <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
 
-                    <TextBlock Text="{Binding Description}" 
-                               FontStyle="Italic" Foreground="#4B2E2B" 
-                               TextWrapping="Wrap" FontSize="11" 
-                               MaxHeight="48" 
-                               TextTrimming="WordEllipsis" />
+                    <Image Source="{Binding Picture}" Width="180" Height="180" Stretch="UniformToFill" Margin="0,0,0,10" />
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0" >
-                      <Button Content="Купить"
-                              Style="{StaticResource ElegantButtonStyle}"
-                              Width="70" Height="24"
-                              Margin="0,0,5,0"
-                              FontSize="11"
-                              Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                              CommandParameter="{Binding}" />
+                    <TextBlock Text="{Binding Name}"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               Foreground="#4B2E2B"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               Margin="0,0,0,5" />
 
-                      <Button Content="В список желаемого"
-                              Style="{StaticResource ElegantButtonStyle}"
-                              Width="120" Height="24"
-                              FontSize="11"
-                              Command="{Binding DataContext.AddToWishlistCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                              CommandParameter="{Binding}" />
-                    </StackPanel>
+                    <TextBlock Text="{Binding Description}"
+                               FontStyle="Italic"
+                               Foreground="#4B2E2B"
+                               TextWrapping="Wrap"
+                               FontSize="12"
+                               MaxHeight="60"
+                               TextTrimming="WordEllipsis"
+                               TextAlignment="Center"
+                               Margin="0,0,0,10" />
 
+                    <TextBlock Text="{Binding Price, StringFormat=€{0:F2}}"
+                               FontWeight="SemiBold"
+                               Foreground="DarkOliveGreen"
+                               FontSize="14"
+                               TextAlignment="Center"
+                               Margin="0,0,0,10" />
+
+                    <Button Content="Купить"
+                            Style="{StaticResource ElegantButtonStyle}"
+                            Width="120"
+                            Height="30"
+                            FontSize="13"
+                            HorizontalAlignment="Center"
+                            Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}" />
                   </StackPanel>
                 </Border>
               </DataTemplate>
             </ItemsControl.ItemTemplate>
-
           </ItemsControl>
         </ScrollViewer>
-
       </StackPanel>
     </Border>
   </Grid>

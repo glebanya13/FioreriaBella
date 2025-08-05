@@ -52,7 +52,7 @@ namespace FioreriaBella.MVVM.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FioreriaBella;component/mvvm/views/userview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FioreriaBella;V1.0.0.0;component/mvvm/views/userview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\MVVM\Views\UserView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

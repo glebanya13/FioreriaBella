@@ -13,6 +13,9 @@
     <Page Update="MVVM\Views\CatalogView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\Dialogs\OrderDialogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\Dialogs\ProductDialogView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -23,6 +26,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\ManageOrdersView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\ManageProductsView.xaml">
