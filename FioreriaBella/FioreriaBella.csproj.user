@@ -10,6 +10,9 @@
     <Page Update="MVVM\Views\AdminView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\CartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\CatalogView.xaml">
       <SubType>Designer</SubType>
     </Page>

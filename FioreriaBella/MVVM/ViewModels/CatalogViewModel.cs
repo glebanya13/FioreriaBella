@@ -62,10 +62,38 @@ namespace FioreriaBella.MVVM.ViewModels
 
     private void AddToCart(object parameter)
     {
-      if (parameter is Product product)
+      if (parameter is not Product product)
+        return;
+
+      var userId = _userSessionService.CurrentUser?.Id;
+      if (userId == null)
+        return;
+
+      var existing = _unitOfWork.Carts
+          .GetAll()
+          .FirstOrDefault(c => c.UserId == userId && c.ProductId == product.Id);
+
+      if (existing != null)
       {
-        ProductAddedToCart?.Invoke(product);
+        System.Windows.MessageBox.Show(
+            $"Товар \"{product.Name}\" уже в корзине.",
+            "Информация",
+            System.Windows.MessageBoxButton.OK,
+            System.Windows.MessageBoxImage.Information);
+        return;
       }
+
+      var cartItem = new Cart
+      {
+        UserId = userId.Value,
+        ProductId = product.Id,
+        Quantity = 1
+      };
+
+      _unitOfWork.Carts.Add(cartItem);
+      _unitOfWork.SaveChanges();
+
+      ProductAddedToCart?.Invoke(product);
     }
 
     private void ApplyFilters()

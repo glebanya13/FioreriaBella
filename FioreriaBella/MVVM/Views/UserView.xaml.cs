@@ -27,12 +27,7 @@ namespace FioreriaBella.MVVM.Views
 
       vm.OpenCartRequested += () =>
       {
-        // this.NavigationService?.Navigate(new CartView(...));
-      };
-
-      vm.OpenWishlistRequested += () =>
-      {
-        // this.NavigationService?.Navigate(new WishlistView(...));
+        this.NavigationService?.Navigate(new CartView(_userSessionService, _unitOfWork));
       };
     }
   }

@@ -16,7 +16,6 @@ namespace FioreriaBella.MVVM.ViewModels
 
     public ICommand LogoutCommand { get; }
     public ICommand OpenCartCommand { get; }
-    public ICommand OpenWishlistCommand { get; }
 
     public event Action LogoutRequested;
     public event Action OpenCartRequested;
@@ -29,7 +28,6 @@ namespace FioreriaBella.MVVM.ViewModels
 
       LogoutCommand = new RelayCommand(_ => Logout());
       OpenCartCommand = new RelayCommand(_ => OpenCartRequested?.Invoke());
-      OpenWishlistCommand = new RelayCommand(_ => OpenWishlistRequested?.Invoke());
     }
 
     private void Logout()
