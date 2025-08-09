@@ -40,6 +40,9 @@
     <Page Update="MVVM\Views\ManageUsersView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\Views\OrderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\Views\RegisterView.xaml">
       <SubType>Designer</SubType>
     </Page>

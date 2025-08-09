@@ -16,7 +16,7 @@ namespace FioreriaBella.MVVM.Views
 
       vm.CheckoutRequested += () =>
       {
-        //NavigationService?.Navigate(new OrderPage(sessionService.CurrentUser!.Id));
+        NavigationService?.Navigate(new OrderView(sessionService, unitOfWork));
       };
 
       vm.BackRequested += () =>

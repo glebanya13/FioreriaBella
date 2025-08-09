@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MVVM\Views\OrderView.xaml.cs" />
     <Compile Remove="MVVM\Views\WishlistView.xaml.cs" />
   </ItemGroup>
 
@@ -22,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="MVVM\Views\OrderView.xaml" />
     <Page Remove="MVVM\Views\WishlistView.xaml" />
   </ItemGroup>
 
