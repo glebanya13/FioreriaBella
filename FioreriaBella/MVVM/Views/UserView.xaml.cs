@@ -20,7 +20,12 @@ namespace FioreriaBella.MVVM.Views
       var vm = new UserViewModel(_userSessionService, _unitOfWork);
       DataContext = vm;
 
-      vm.LogoutRequested += () =>
+    vm.OpenMyOrdersRequested += () =>
+    {
+        this.NavigationService?.Navigate(new MyOrdersView(_userSessionService, _unitOfWork));
+    };
+
+    vm.LogoutRequested += () =>
       {
         this.NavigationService?.Navigate(new LoginView(_userSessionService, _unitOfWork));
       };
@@ -29,6 +34,11 @@ namespace FioreriaBella.MVVM.Views
       {
         this.NavigationService?.Navigate(new CartView(_userSessionService, _unitOfWork));
       };
+
+    vm.OpenMyPaymentsRequested += () =>
+    {
+        this.NavigationService?.Navigate(new MyPaymentsView(_userSessionService, _unitOfWork));
+    };
     }
   }
 }

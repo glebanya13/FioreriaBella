@@ -1,0 +1,60 @@
+﻿<Page x:Class="FioreriaBella.MVVM.Views.MyPaymentsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Мои платежи"
+      Background="Transparent">
+
+    <Grid Background="Transparent">
+        <Border Padding="30"
+                BorderBrush="Goldenrod"
+                BorderThickness="2"
+                CornerRadius="16"
+                Width="800"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Background="#FFFDF5F0"
+                SnapsToDevicePixels="True"
+                Margin="0,20">
+
+            <StackPanel>
+                <Button Content="← Назад"
+                        Width="100"
+                        Margin="0,0,0,15"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource ElegantButtonStyle}"
+                        Command="{Binding BackCommand}"/>
+
+                <TextBlock Text="Мои платежи"
+                           FontSize="26"
+                           FontFamily="Georgia"
+                           FontWeight="Bold"
+                           Foreground="DarkOliveGreen"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <DataGrid ItemsSource="{Binding Payments}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          CanUserResizeRows="False"
+                          CanUserSortColumns="True"
+                          IsReadOnly="True"
+                          RowHeight="40"
+                          ColumnHeaderHeight="35"
+                          Style="{StaticResource ElegantDataGridStyle}"
+                          HorizontalAlignment="Stretch"
+                          HorizontalContentAlignment="Stretch"
+                          Width="Auto">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" MinWidth="50"/>
+                        <DataGridTextColumn Header="Дата платежа" Binding="{Binding PaymentDate, StringFormat='dd.MM.yyyy HH:mm'}" Width="*" MinWidth="150"/>
+                        <DataGridTextColumn Header="Заказ №" Binding="{Binding OrderId}" Width="*" MinWidth="80"/>
+                        <DataGridTextColumn Header="Сумма" Binding="{Binding Amount, StringFormat='{}{0:N2} ₽'}" Width="*" MinWidth="100"/>
+                        <DataGridTextColumn Header="Способ оплаты" Binding="{Binding PaymentMethod}" Width="*" MinWidth="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

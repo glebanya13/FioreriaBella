@@ -3,44 +3,100 @@
   "WorkspaceRootPath": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\orderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\orderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\mypaymentsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\mypaymentsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\mypaymentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\mypaymentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\myordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\myordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\myordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\myordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\orderview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\orderview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\catalogview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\catalogview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\manageusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\manageusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\productdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\productdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\orderdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\orderdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\converters\\multiplyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\converters\\multiplyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\resources\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\catalogview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\catalogview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.models\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|solutionrelative:fioreriabella.models\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.models\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|solutionrelative:fioreriabella.models\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.models\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|solutionrelative:fioreriabella.models\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\orderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\orderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.models\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|solutionrelative:fioreriabella.models\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\catalogview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\catalogview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D818D1CD-66F4-4674-8D96-C6E166A0EBAE}|FioreriaBella.Models\\FioreriaBella.Models.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.models\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,24 +111,8 @@
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\catalogview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\catalogview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\cartview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\cartview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\orderview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -87,20 +127,8 @@
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\catalogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageordersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\manageordersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\manageordersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageordersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageusersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageusersview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,24 +143,8 @@
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\manageproductsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\manageusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\manageusersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\productdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\productdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\userdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\userdialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\adminview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -175,20 +187,12 @@
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella.dal\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04E9F072-191F-4F02-B147-8C6698532161}|FioreriaBella.DAL\\FioreriaBella.DAL.csproj|solutionrelative:fioreriabella.dal\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageusersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageusersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageproductsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -205,10 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\views\\manageproductsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\views\\manageproductsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\mvvm\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|solutionrelative:fioreriabella\\mvvm\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21170916-58CD-476A-8E49-41F8C59029D9}|FioreriaBella\\FioreriaBella.csproj|c:\\users\\gleb2\\source\\repos\\fioreriabella\\fioreriabella\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -289,50 +289,153 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyPaymentsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyPaymentsView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\MyPaymentsView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyPaymentsView.xaml.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\MyPaymentsView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T13:36:19.253Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAswN4AAAAKAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml.cs*",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\UserView.xaml.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:45:23.389Z",
+              "WhenOpened": "2025-07-31T07:35:38.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "UserView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\UserView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\UserView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-02T15:31:28.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T15:39:24.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MyPaymentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MyPaymentsViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\MyPaymentsViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MyPaymentsViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\MyPaymentsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T13:32:32.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyOrdersView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-09T13:00:20.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyOrdersView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\MyOrdersView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T13:04:08.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OrderView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\OrderView.xaml.cs",
               "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml.cs",
               "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\OrderView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T15:32:12.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-09T08:44:51.132Z",
+              "DocumentIndex": 8,
+              "Title": "CatalogView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:14:54.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "ManageUsersViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA+wC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T12:14:44.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductDialogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T07:47:47.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "OrderDialogViewModel.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\OrderDialogViewModel.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\OrderDialogViewModel.cs",
@@ -345,365 +448,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAPEAAAAAAAAAAAAowBUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T14:38:28.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Resources\\Styles.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Resources\\Styles.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Resources\\Styles.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Resources\\Styles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-02T12:25:10.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CatalogView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-02T15:57:07.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Order.cs",
-              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:42:56.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\OrderItem.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\OrderItem.cs",
-              "RelativeToolTip": "FioreriaBella.Models\\Entities\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:42:55.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ManageOrdersViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAawEcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T19:05:12.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ManageOrdersView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-05T19:04:17.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ManageUsersView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-03T13:43:41.916Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwC0AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T11:27:05.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T13:40:26.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ManageProductsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T07:14:46.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ManageUsersViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageUsersViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:14:44.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ProductDialogViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ProductDialogViewModel.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAwwEcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T07:47:47.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserDialogViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAIA4wHgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:16:42.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\UserViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T15:39:24.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "UserView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\UserView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\UserView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-02T15:31:28.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Payment.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Payment.cs",
-              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:42:54.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Cart.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Cart.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Cart.cs",
-              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Cart.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:42:57.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Product.cs",
-              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Product.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:42:53.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "CartView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CartView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CartView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-08T20:46:53.141Z",
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\OrderViewModel.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAswN4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:45:23.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "CatalogView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Title": "MultiplyConverter.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Converters\\MultiplyConverter.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Converters\\MultiplyConverter.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Converters\\MultiplyConverter.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Converters\\MultiplyConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T20:14:54.874Z",
+              "WhenOpened": "2025-08-09T13:02:12.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CartView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:45:32.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\UserView.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:35:38.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.DAL\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "FioreriaBella.DAL\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:32:41.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T10:33:45.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "OrderView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 36,
+              "Title": "AdminView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\AdminView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\AdminView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\AdminView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\AdminView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-09T08:40:11.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-02T16:06:02.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CartViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T20:28:01.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CatalogViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T21:19:07.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ManageOrdersView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T06:56:43.157Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Address.cs",
               "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Address.cs",
@@ -715,18 +497,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AdminView.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\AdminView.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\AdminView.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\AdminView.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\AdminView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-02T16:06:02.613Z"
+              "DocumentIndex": 30,
+              "Title": "CatalogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\CatalogViewModel.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:19:07.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "ProductReview.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\ProductReview.cs",
               "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\ProductReview.cs",
@@ -738,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\User.cs",
               "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\User.cs",
@@ -750,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AdminView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\AdminView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\AdminView.xaml.cs",
@@ -762,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "OrderDialogView.xaml",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\OrderDialogView.xaml",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\OrderDialogView.xaml",
@@ -773,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "OrderDialogView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\OrderDialogView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\OrderDialogView.xaml.cs",
@@ -785,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "ProductDialogView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\ProductDialogView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\ProductDialogView.xaml.cs",
@@ -797,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "ProductDialogView.xaml",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\ProductDialogView.xaml",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\ProductDialogView.xaml",
@@ -808,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Commands\\RelayCommand.cs",
@@ -820,18 +603,255 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-05T18:56:58.069Z"
+              "DocumentIndex": 14,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.DAL\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "FioreriaBella.DAL\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:32:41.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 15,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "FioreriaBella.DAL\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:33:45.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Resources\\Styles.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Resources\\Styles.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Resources\\Styles.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Resources\\Styles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-02T12:25:10.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "FioreriaBella.Models\\Entities\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:42:55.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Order.cs",
+              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Order.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA9wBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:42:56.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-09T08:44:51.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ManageOrdersView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-05T19:04:17.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ManageOrdersView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageOrdersView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T06:56:43.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAowBUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:38:28.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CatalogView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CatalogView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-02T15:57:07.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ManageOrdersViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageOrdersViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAawEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T19:05:12.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T11:27:05.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T13:40:26.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ManageProductsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\ManageProductsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T07:14:46.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserDialogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\UserDialogViewModel.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAIA4wHgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T12:16:42.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Cart.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Cart.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Cart.cs",
+              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Cart.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:42:57.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "FioreriaBella.Models\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.Models\\Entities\\Product.cs",
+              "RelativeToolTip": "FioreriaBella.Models\\Entities\\Product.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T10:42:53.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CartView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CartView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CartView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-08T20:46:53.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CartView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\CartView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T07:45:32.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrderView.xaml",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\OrderView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-09T08:40:11.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CartViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
+              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
+              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
+              "RelativeToolTip": "FioreriaBella\\MVVM\\ViewModels\\CartViewModel.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:28:01.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "FioreriaBella.DAL\\Repositories\\UnitOfWork.cs",
@@ -843,19 +863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ManageUsersView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageUsersView.xaml.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T20:17:17.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "ManageProductsView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageProductsView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageProductsView.xaml.cs",
@@ -867,7 +875,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "ApplicationContext.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella.DAL\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "FioreriaBella.DAL\\ApplicationContext.cs",
@@ -879,7 +887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "UserDialogView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\UserDialogView.xaml.cs",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\UserDialogView.xaml.cs",
@@ -891,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "UserDialogView.xaml",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\Dialogs\\UserDialogView.xaml",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\Dialogs\\UserDialogView.xaml",
@@ -902,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "ManageProductsView.xaml",
               "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Views\\ManageProductsView.xaml",
               "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Views\\ManageProductsView.xaml",
@@ -910,18 +918,6 @@
               "RelativeToolTip": "FioreriaBella\\MVVM\\Views\\ManageProductsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-08-03T06:58:29.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "BoolToVisibilityConverter.cs",
-              "DocumentMoniker": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeDocumentMoniker": "FioreriaBella\\MVVM\\Converters\\BoolToVisibilityConverter.cs",
-              "ToolTip": "C:\\Users\\gleb2\\source\\repos\\FioreriaBella\\FioreriaBella\\MVVM\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeToolTip": "FioreriaBella\\MVVM\\Converters\\BoolToVisibilityConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T13:05:11.567Z"
             },
             {
               "$type": "Document",
@@ -1075,8 +1071,7 @@
               "RelativeToolTip": "FioreriaBella\\FioreriaBella.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-02T11:22:30.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-02T11:22:30.653Z"
             },
             {
               "$type": "Document",
@@ -1123,8 +1118,7 @@
               "RelativeToolTip": "FioreriaBella.DAL\\FioreriaBella.DAL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-02T10:24:10.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-02T10:24:10.634Z"
             }
           ]
         }

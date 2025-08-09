@@ -16,10 +16,15 @@ namespace FioreriaBella.MVVM.ViewModels
 
     public ICommand LogoutCommand { get; }
     public ICommand OpenCartCommand { get; }
+    public ICommand OpenMyOrdersCommand { get; }
+    public ICommand OpenMyPaymentsCommand { get; }
+
+
 
     public event Action LogoutRequested;
     public event Action OpenCartRequested;
-    public event Action OpenWishlistRequested;
+    public event Action OpenMyOrdersRequested;
+    public event Action OpenMyPaymentsRequested;
 
     public UserViewModel(UserSessionService userSessionService, IUnitOfWork unitOfWork)
     {
@@ -27,6 +32,8 @@ namespace FioreriaBella.MVVM.ViewModels
       _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
 
       LogoutCommand = new RelayCommand(_ => Logout());
+      OpenMyOrdersCommand = new RelayCommand(_ => OpenMyOrdersRequested?.Invoke());
+      OpenMyPaymentsCommand = new RelayCommand(_ => OpenMyPaymentsRequested?.Invoke());
       OpenCartCommand = new RelayCommand(_ => OpenCartRequested?.Invoke());
     }
 
