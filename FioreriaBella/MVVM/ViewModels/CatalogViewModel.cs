@@ -40,9 +40,11 @@ namespace FioreriaBella.MVVM.ViewModels
 
         public ICommand AddToCartCommand { get; }
         public ICommand BackCommand { get; }
+        public ICommand ViewReviewsCommand { get; }
 
         public event Action BackRequested;
         public event Action<Product> ProductAddedToCart;
+        public event Action<int> ViewReviewsRequested;
 
         public CatalogViewModel(IUnitOfWork unitOfWork, UserSessionService userSessionService)
         {
@@ -53,6 +55,7 @@ namespace FioreriaBella.MVVM.ViewModels
 
             AddToCartCommand = new RelayCommand(AddToCart);
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
+            ViewReviewsCommand = new RelayCommand(ViewReviews);
         }
 
         private void LoadProducts()
@@ -126,6 +129,14 @@ namespace FioreriaBella.MVVM.ViewModels
             foreach (var product in sorted)
             {
                 Products.Add(product);
+            }
+        }
+
+        private void ViewReviews(object parameter)
+        {
+            if (parameter is Product product)
+            {
+                ViewReviewsRequested?.Invoke(product.Id);
             }
         }
     }

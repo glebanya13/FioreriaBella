@@ -1,6 +1,7 @@
 ﻿using FioreriaBella.DAL.Interfaces;
 using FioreriaBella.Models.Entities;
 using FioreriaBella.MVVM.Commands;
+using FioreriaBella.MVVM.Services;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -10,20 +11,30 @@ namespace FioreriaBella.MVVM.ViewModels
     public class ProductReviewsViewModel : BaseViewModel
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserSessionService _sessionService;
         private readonly int _productId;
+        private bool _isAdmin;
 
         public ObservableCollection<ProductReview> Reviews { get; } = new ObservableCollection<ProductReview>();
         public string ProductName { get; set; }
+        public bool IsAdmin
+        {
+            get => _isAdmin;
+            private set => SetProperty(ref _isAdmin, value);
+        }
 
         public ICommand BackCommand { get; }
         public ICommand DeleteReviewCommand { get; }
 
         public event Action? BackRequested;
 
-        public ProductReviewsViewModel(IUnitOfWork unitOfWork, int productId)
+        public ProductReviewsViewModel(IUnitOfWork unitOfWork, UserSessionService sessionService, int productId)
         {
             _unitOfWork = unitOfWork;
+            _sessionService = sessionService;
             _productId = productId;
+
+            IsAdmin = _sessionService.CurrentUser?.IsAdmin ?? false;
 
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
             DeleteReviewCommand = new RelayCommand(DeleteReview);

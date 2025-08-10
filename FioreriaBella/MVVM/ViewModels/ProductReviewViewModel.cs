@@ -2,6 +2,7 @@
 using FioreriaBella.MVVM.Commands;
 using FioreriaBella.MVVM.Services;
 using FioreriaBella.Models.Entities;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -25,15 +26,30 @@ namespace FioreriaBella.MVVM.ViewModels
             {
                 if (SetProperty(ref _reviewComment, value))
                 {
+                    ValidateReviewComment();
                     OnPropertyChanged(nameof(CanSubmitReview));
                     OnPropertyChanged(nameof(CanUpdateReview));
                 }
             }
         }
 
+        private string _reviewCommentHint = string.Empty;
+        public string ReviewCommentHint
+        {
+            get => _reviewCommentHint;
+            set => SetProperty(ref _reviewCommentHint, value);
+        }
+
+        private string _reviewCommentColor = "Red";
+        public string ReviewCommentColor
+        {
+            get => _reviewCommentColor;
+            set => SetProperty(ref _reviewCommentColor, value);
+        }
+
         public bool HasExistingReview => _hasExistingReview;
-        public bool CanSubmitReview => !_hasExistingReview && !string.IsNullOrWhiteSpace(ReviewComment);
-        public bool CanUpdateReview => _hasExistingReview && !string.IsNullOrWhiteSpace(ReviewComment);
+        public bool CanSubmitReview => !_hasExistingReview && ReviewCommentColor == "Green";
+        public bool CanUpdateReview => _hasExistingReview && ReviewCommentColor == "Green";
 
         public ICommand BackCommand { get; }
         public ICommand SubmitReviewCommand { get; }
@@ -56,6 +72,25 @@ namespace FioreriaBella.MVVM.ViewModels
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
             SubmitReviewCommand = new RelayCommand(_ => SubmitReview(), _ => CanSubmitReview);
             UpdateReviewCommand = new RelayCommand(_ => UpdateReview(), _ => CanUpdateReview);
+        }
+
+        private void ValidateReviewComment()
+        {
+            if (string.IsNullOrWhiteSpace(ReviewComment))
+            {
+                ReviewCommentHint = "Отзыв не может быть пустым";
+                ReviewCommentColor = "Red";
+            }
+            else if (ReviewComment.Length < 10)
+            {
+                ReviewCommentHint = "Отзыв должен содержать минимум 10 символов";
+                ReviewCommentColor = "Red";
+            }
+            else
+            {
+                ReviewCommentHint = "✓";
+                ReviewCommentColor = "Green";
+            }
         }
 
         private void CheckExistingReview()

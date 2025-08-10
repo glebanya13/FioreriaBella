@@ -10,12 +10,8 @@
         WindowState="Maximized">
 
   <Window.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/FioreriaBella;component/MVVM/Resources/Styles.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-
-      <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <ResourceDictionary>
+            <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
     </ResourceDictionary>
   </Window.Resources>
 

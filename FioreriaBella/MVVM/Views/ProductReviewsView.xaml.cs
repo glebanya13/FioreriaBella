@@ -10,10 +10,8 @@ namespace FioreriaBella.MVVM.Views
         public ProductReviewsView(UserSessionService sessionService, IUnitOfWork unitOfWork, int productId)
         {
             InitializeComponent();
-
-            var vm = new ProductReviewsViewModel(unitOfWork, productId);
+            var vm = new ProductReviewsViewModel(unitOfWork, sessionService, productId);
             DataContext = vm;
-
             vm.BackRequested += () => this.NavigationService?.GoBack();
         }
     }

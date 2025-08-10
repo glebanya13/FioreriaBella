@@ -127,14 +127,24 @@
                                TextAlignment="Center"
                                Margin="0,0,0,10" />
 
+                                        <Button Content="Отзывы"
+                                                Style="{StaticResource OutlinedButtonStyle}"
+                                                Width="120"
+                                                Height="30"
+                                                FontSize="13"
+                                                HorizontalAlignment="Center"
+                                                Margin="0,5,0,5"
+                                                Command="{Binding DataContext.ViewReviewsCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                                CommandParameter="{Binding}"/>
+
                                         <Button Content="Купить"
-                            Style="{StaticResource ElegantButtonStyle}"
-                            Width="120"
-                            Height="30"
-                            FontSize="13"
-                            HorizontalAlignment="Center"
-                            Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                            CommandParameter="{Binding}" />
+                                                Style="{StaticResource ElegantButtonStyle}"
+                                                Width="120"
+                                                Height="30"
+                                                FontSize="13"
+                                                HorizontalAlignment="Center"
+                                                Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                                CommandParameter="{Binding}" />
                                     </StackPanel>
                                 </Border>
                             </DataTemplate>

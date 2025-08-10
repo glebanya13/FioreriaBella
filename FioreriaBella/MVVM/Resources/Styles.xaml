@@ -454,4 +454,42 @@
       </Setter.Value>
     </Setter>
   </Style>
+
+    <Style x:Key="ReviewCardStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Goldenrod"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="15"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="Background" Value="#FFFDF5F0"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="8" 
+                            ShadowDepth="2" 
+                            Opacity="0.2" 
+                            Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ReviewUsernameText" TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="FontFamily" Value="Georgia"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="SaddleBrown"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="ReviewDateText" TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="FontFamily" Value="Georgia"/>
+        <Setter Property="Foreground" Value="#8B6B3D"/>
+        <Setter Property="FontSize" Value="13"/>
+    </Style>
+
+    <Style x:Key="ReviewCommentText" TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="FontFamily" Value="Palatino Linotype"/>
+        <Setter Property="Foreground" Value="#5C3A21"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin" Value="0,5,0,0"/>
+    </Style>
 </ResourceDictionary>

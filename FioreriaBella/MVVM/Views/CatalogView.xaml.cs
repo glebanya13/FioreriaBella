@@ -6,27 +6,24 @@ using System.Windows.Controls;
 
 namespace FioreriaBella.MVVM.Views
 {
-  public partial class CatalogView : Page
-  {
-    private readonly UserSessionService _userSessionService;
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CatalogView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
+    public partial class CatalogView : Page
     {
-      InitializeComponent();
+        private readonly UserSessionService _userSessionService;
+        private readonly IUnitOfWork _unitOfWork;
 
-      _userSessionService = userSessionService;
-      _unitOfWork = unitOfWork;
+        public CatalogView(UserSessionService userSessionService, IUnitOfWork unitOfWork)
+        {
+            InitializeComponent();
+            _userSessionService = userSessionService;
+            _unitOfWork = unitOfWork;
 
-      var vm = new CatalogViewModel(_unitOfWork, _userSessionService);
-      DataContext = vm;
+            var vm = new CatalogViewModel(_unitOfWork, _userSessionService);
+            DataContext = vm;
 
-      vm.BackRequested += () => this.NavigationService?.GoBack();
-
-      vm.ProductAddedToCart += product =>
-      {
-        MessageBox.Show($"Товар '{product.Name}' добавлен в корзину");
-      };
+            vm.BackRequested += () => this.NavigationService?.GoBack();
+            vm.ProductAddedToCart += product => MessageBox.Show($"Товар '{product.Name}' добавлен в корзину");
+            vm.ViewReviewsRequested += productId =>
+                this.NavigationService?.Navigate(new ProductReviewsView(_userSessionService, _unitOfWork, productId));
+        }
     }
-  }
 }

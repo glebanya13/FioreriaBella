@@ -1,8 +1,13 @@
 ﻿<Page x:Class="FioreriaBella.MVVM.Views.ProductReviewsView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:conv="clr-namespace:FioreriaBella.MVVM.Converters"
       Title="Отзывы о товаре"
       Background="Transparent">
+
+    <Page.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Page.Resources>
 
     <Grid Background="Transparent">
         <Border Padding="30"
@@ -37,28 +42,53 @@
                           CanUserAddRows="False"
                           RowHeight="60"
                           ColumnHeaderHeight="35"
-                          Style="{StaticResource ElegantDataGridStyle}">
+                          Style="{StaticResource ElegantDataGridStyle}"
+                          Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}">
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Пользователь" Binding="{Binding User.Username}" Width="*"/>
                         <DataGridTextColumn Header="Дата" Binding="{Binding CreatedAt, StringFormat='dd.MM.yyyy'}" Width="120"/>
                         <DataGridTextColumn Header="Отзыв" Binding="{Binding Comment}" Width="*"/>
-
                         <DataGridTemplateColumn Header="Действия" Width="100">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Удалить"
-                                            Command="{Binding DataContext.DeleteReviewCommand, RelativeSource={RelativeSource AncestorType=Page}}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource OutlinedButtonStyle}"
-                                            Margin="2"
-                                            Padding="5,2"
-                                            FontSize="12"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Width="30" Height="30"
+                                                Margin="2"
+                                                Style="{StaticResource IconButtonStyle}"
+                                                ToolTip="Удалить отзыв"
+                                                Command="{Binding DataContext.DeleteReviewCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                                CommandParameter="{Binding}">
+                                            <Image Source="pack://application:,,,/MVVM/Resources/delete_icon.png" Width="18" Height="18"/>
+                                        </Button>
+                                    </StackPanel>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
+
+                <ItemsControl ItemsSource="{Binding Reviews}"
+                              Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=inverse}"
+                              Margin="0,10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource ReviewCardStyle}">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding User.Username}" 
+                               Style="{StaticResource ReviewUsernameText}"
+                               Margin="0,0,10,0"/>
+                                        <TextBlock Text="{Binding CreatedAt, StringFormat='dd.MM.yyyy'}"
+                               Style="{StaticResource ReviewDateText}"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding Comment}" 
+                           Style="{StaticResource ReviewCommentText}"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
         </Border>
     </Grid>
