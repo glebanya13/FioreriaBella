@@ -30,7 +30,7 @@ namespace FioreriaBella.MVVM.Views
       };
       vm.RequestNavigateToOrders += () =>
       {
-        this.NavigationService?.Navigate(new ManageOrdersView(_userSessionService, _unitOfWork));
+        this.NavigationService?.Navigate(new ManageOrdersView(_unitOfWork));
       };
       vm.RequestLogout += () =>
       {

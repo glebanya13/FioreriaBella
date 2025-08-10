@@ -7,16 +7,27 @@ namespace FioreriaBella.MVVM.Views
 {
     public partial class OrderView : Page
     {
+        private readonly UserSessionService _sessionService;
+        private readonly IUnitOfWork _unitOfWork;
+
         public OrderView(UserSessionService sessionService, IUnitOfWork unitOfWork)
         {
             InitializeComponent();
 
-            var vm = new OrderViewModel(unitOfWork, sessionService);
+            _sessionService = sessionService;
+            _unitOfWork = unitOfWork;
+
+            var vm = new OrderViewModel(_unitOfWork, _sessionService);
             DataContext = vm;
 
             vm.OrderConfirmed += () =>
             {
-                this.NavigationService?.Navigate(new UserView(sessionService, unitOfWork));
+                this.NavigationService?.Navigate(new UserView(_sessionService, _unitOfWork));
+            };
+
+            vm.BackRequested += () =>
+            {
+                this.NavigationService?.GoBack();
             };
         }
     }

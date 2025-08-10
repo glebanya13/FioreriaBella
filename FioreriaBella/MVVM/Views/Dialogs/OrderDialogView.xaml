@@ -34,14 +34,9 @@
             <StackPanel Grid.Row="1" Margin="0,10,0,10">
                 <TextBlock Text="Статус:" FontWeight="Bold" Margin="0,0,0,6" FontFamily="Palatino Linotype" FontSize="14"/>
 
-                <ComboBox SelectedItem="{Binding Status, UpdateSourceTrigger=PropertyChanged}"
-                           Style="{StaticResource ElegantComboBoxStyle}">
-                    <ComboBoxItem Content="В обработке"/>
-                    <ComboBoxItem Content="Готовится"/>
-                    <ComboBoxItem Content="Отправлен"/>
-                    <ComboBoxItem Content="Доставлен"/>
-                    <ComboBoxItem Content="Отменен"/>
-                </ComboBox>
+                <ComboBox ItemsSource="{Binding AvailableStatuses}"
+                          SelectedItem="{Binding Status, UpdateSourceTrigger=PropertyChanged}"
+                          Style="{StaticResource ElegantComboBoxStyle}"/>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">

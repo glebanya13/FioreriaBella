@@ -56,7 +56,7 @@ namespace FioreriaBella.MVVM.ViewModels
                 _unitOfWork.Orders.Update(order);
                 _unitOfWork.SaveChanges();
 
-                LoadOrders(); // Обновляем список заказов
+                LoadOrders();
                 OrderCancelled?.Invoke();
 
                 MessageBox.Show("Заказ успешно отменен", "Отмена заказа",

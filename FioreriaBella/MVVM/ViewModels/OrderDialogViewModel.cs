@@ -1,19 +1,27 @@
 using FioreriaBella.Models.Entities;
 using FioreriaBella.MVVM.Commands;
+using FioreriaBella.MVVM.ViewModels;
 using System.Windows.Input;
 
-namespace FioreriaBella.MVVM.ViewModels
+public class OrderDialogViewModel : BaseViewModel
 {
-  public class OrderDialogViewModel : BaseViewModel
-  {
     private readonly Order _originalOrder;
 
-    private string _status = string.Empty;
+    private string _status;
     public string Status
     {
-      get => _status;
-      set => SetProperty(ref _status, value);
+        get => _status;
+        set => SetProperty(ref _status, value);
     }
+
+    public List<string> AvailableStatuses { get; } = new List<string>
+    {
+        "В обработке",
+        "Готовится",
+        "Отправлен",
+        "Доставлен",
+        "Отменен"
+    };
 
     public ICommand SaveCommand { get; }
     public ICommand CancelCommand { get; }
@@ -22,33 +30,31 @@ namespace FioreriaBella.MVVM.ViewModels
 
     public OrderDialogViewModel(Order order)
     {
-      _originalOrder = order;
+        _originalOrder = order;
+        _status = order.Status;
 
-      _status = order.Status;
-
-      SaveCommand = new RelayCommand(_ => Save());
-      CancelCommand = new RelayCommand(_ => Cancel());
+        SaveCommand = new RelayCommand(_ => Save());
+        CancelCommand = new RelayCommand(_ => Cancel());
     }
 
     private void Save()
     {
-      var updatedOrder = new Order
-      {
-        Id = _originalOrder.Id,
-        UserId = _originalOrder.UserId,
-        OrderDate = _originalOrder.OrderDate,
-        Status = Status,
-        User = _originalOrder.User,
-        OrderItems = _originalOrder.OrderItems,
-        Payments = _originalOrder.Payments
-      };
+        var updatedOrder = new Order
+        {
+            Id = _originalOrder.Id,
+            UserId = _originalOrder.UserId,
+            OrderDate = _originalOrder.OrderDate,
+            Status = Status,
+            User = _originalOrder.User,
+            OrderItems = _originalOrder.OrderItems,
+            Payments = _originalOrder.Payments
+        };
 
-      RequestClose?.Invoke(true, updatedOrder);
+        RequestClose?.Invoke(true, updatedOrder);
     }
 
     private void Cancel()
     {
-      RequestClose?.Invoke(false, null);
+        RequestClose?.Invoke(false, null);
     }
-  }
 }
