@@ -13,6 +13,9 @@
     <Compile Update="MVVM\Views\MyPaymentsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\Views\ProductReviewView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MVVM\Views\AdminView.xaml">
@@ -55,6 +58,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\OrderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\Views\ProductReviewView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\Views\RegisterView.xaml">

@@ -188,3 +188,5 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\ref\FioreriaBella.dll
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.g.cs

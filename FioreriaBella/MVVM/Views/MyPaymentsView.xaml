@@ -1,8 +1,13 @@
 ﻿<Page x:Class="FioreriaBella.MVVM.Views.MyPaymentsView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:FioreriaBella.MVVM.Converters"
       Title="Мои платежи"
       Background="Transparent">
+
+    <Page.Resources>
+        <local:MultiplyConverter x:Key="MultiplyConverter"/>
+    </Page.Resources>
 
     <Grid Background="Transparent">
         <Border Padding="30"
@@ -33,6 +38,7 @@
                            Margin="0,0,0,20"/>
 
                 <DataGrid ItemsSource="{Binding Payments}" 
+                          SelectedItem="{Binding SelectedPayment, Mode=TwoWay}"
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
                           CanUserDeleteRows="False"
@@ -42,6 +48,7 @@
                           RowHeight="40"
                           ColumnHeaderHeight="35"
                           Style="{StaticResource ElegantDataGridStyle}"
+                          RowDetailsVisibilityMode="VisibleWhenSelected"
                           HorizontalAlignment="Stretch"
                           HorizontalContentAlignment="Stretch"
                           Width="Auto">
@@ -53,6 +60,54 @@
                         <DataGridTextColumn Header="Сумма" Binding="{Binding Amount, StringFormat='{}{0:N2} ₽'}" Width="*" MinWidth="100"/>
                         <DataGridTextColumn Header="Способ оплаты" Binding="{Binding PaymentMethod}" Width="*" MinWidth="120"/>
                     </DataGrid.Columns>
+
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <Border Background="#FFF8F0E0" Padding="10" Margin="5" CornerRadius="8">
+                                <StackPanel>
+                                    <TextBlock Text="Детали заказа:" FontWeight="Bold" Margin="0,0,0,5"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                                        <TextBlock Text="Статус заказа:" FontWeight="SemiBold" Width="120"/>
+                                        <TextBlock Text="{Binding Order.Status}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                                        <TextBlock Text="Дата заказа:" FontWeight="SemiBold" Width="120"/>
+                                        <TextBlock Text="{Binding Order.OrderDate, StringFormat='dd.MM.yyyy'}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                                        <TextBlock Text="Общая сумма:" FontWeight="SemiBold" Width="120"/>
+                                        <TextBlock Text="{Binding Order.TotalAmount, StringFormat='{}{0:N2} ₽'}"/>
+                                    </StackPanel>
+
+                                    <TextBlock Text="Состав заказа:" FontWeight="Bold" Margin="0,10,0,5"/>
+                                    <ItemsControl ItemsSource="{Binding Order.OrderItems}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border BorderBrush="#FFD3D3D3" BorderThickness="0,0,0,1" Padding="0,5">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Product.Name}" Width="200"/>
+                                                        <TextBlock Text="{Binding Product.Price, StringFormat='{}{0:N2} ₽'}" Width="100"/>
+                                                        <TextBlock Text="{Binding Quantity}" Width="80"/>
+                                                        <TextBlock Text="{Binding Path=., Converter={StaticResource MultiplyConverter}, StringFormat='{}{0:N2} ₽'}" Width="100"/>
+                                                        <Button Content="Оставить отзыв" 
+                                                                Width="140"
+                                                                Height="30"
+                                                                Margin="10,0,0,0"
+                                                                Style="{StaticResource ElegantButtonStyle}"
+                                                                Command="{Binding DataContext.LeaveReviewCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                                                CommandParameter="{Binding Product}"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
                 </DataGrid>
             </StackPanel>
         </Border>

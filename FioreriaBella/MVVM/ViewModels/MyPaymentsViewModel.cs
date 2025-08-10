@@ -14,9 +14,18 @@ namespace FioreriaBella.MVVM.ViewModels
 
         public ObservableCollection<Payment> Payments { get; } = new ObservableCollection<Payment>();
 
+        private Payment? _selectedPayment;
+        public Payment? SelectedPayment
+        {
+            get => _selectedPayment;
+            set => SetProperty(ref _selectedPayment, value);
+        }
+
         public ICommand BackCommand { get; }
+        public ICommand LeaveReviewCommand { get; }
 
         public event Action? BackRequested;
+        public event Action<Product>? LeaveReviewRequested;
 
         public MyPaymentsViewModel(IUnitOfWork unitOfWork, UserSessionService sessionService)
         {
@@ -24,6 +33,13 @@ namespace FioreriaBella.MVVM.ViewModels
             _sessionService = sessionService;
 
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
+            LeaveReviewCommand = new RelayCommand(product =>
+            {
+                if (product is Product p)
+                {
+                    LeaveReviewRequested?.Invoke(p);
+                }
+            });
 
             LoadPayments();
         }
@@ -49,6 +65,15 @@ namespace FioreriaBella.MVVM.ViewModels
                 foreach (var payment in payments)
                 {
                     payment.Order = order;
+                    payment.Order.OrderItems = _unitOfWork.OrderItems
+                        .Find(oi => oi.OrderId == order.Id)
+                        .ToList();
+
+                    foreach (var item in payment.Order.OrderItems)
+                    {
+                        item.Product = _unitOfWork.Products.GetById(item.ProductId);
+                    }
+
                     Payments.Add(payment);
                 }
             }

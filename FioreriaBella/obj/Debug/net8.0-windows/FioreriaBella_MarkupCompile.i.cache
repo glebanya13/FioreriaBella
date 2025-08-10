@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\App.xaml
-17-1255422839
+18102120977
 
-43-1458284182
+451727172825
 231-1007627991
-MVVM\Resources\Styles.xaml;MVVM\Views\AdminView.xaml;MVVM\Views\CartView.xaml;MVVM\Views\CatalogView.xaml;MVVM\Views\Dialogs\OrderDialogView.xaml;MVVM\Views\Dialogs\ProductDialogView.xaml;MVVM\Views\Dialogs\UserDialogView.xaml;MVVM\Views\LoginView.xaml;MVVM\Views\MainWindow.xaml;MVVM\Views\ManageOrdersView.xaml;MVVM\Views\ManageProductsView.xaml;MVVM\Views\ManageUsersView.xaml;MVVM\Views\MyOrdersView.xaml;MVVM\Views\MyPaymentsView.xaml;MVVM\Views\OrderView.xaml;MVVM\Views\RegisterView.xaml;MVVM\Views\UserView.xaml;
+MVVM\Resources\Styles.xaml;MVVM\Views\AdminView.xaml;MVVM\Views\CartView.xaml;MVVM\Views\CatalogView.xaml;MVVM\Views\Dialogs\OrderDialogView.xaml;MVVM\Views\Dialogs\ProductDialogView.xaml;MVVM\Views\Dialogs\UserDialogView.xaml;MVVM\Views\LoginView.xaml;MVVM\Views\MainWindow.xaml;MVVM\Views\ManageOrdersView.xaml;MVVM\Views\ManageProductsView.xaml;MVVM\Views\ManageUsersView.xaml;MVVM\Views\MyOrdersView.xaml;MVVM\Views\MyPaymentsView.xaml;MVVM\Views\OrderView.xaml;MVVM\Views\ProductReviewView.xaml;MVVM\Views\RegisterView.xaml;MVVM\Views\UserView.xaml;
 
 False
 

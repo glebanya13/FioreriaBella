@@ -1,0 +1,72 @@
+﻿<Page x:Class="FioreriaBella.MVVM.Views.ProductReviewView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:FioreriaBella.MVVM.Converters"
+      Title="Оставить отзыв"
+      Background="Transparent">
+
+    <Page.Resources>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Page.Resources>
+
+    <Grid Background="Transparent" Margin="20">
+        <Border Background="#FFFDF5F0"
+                CornerRadius="20"
+                Padding="30"
+                BorderThickness="3"
+                BorderBrush="DarkOliveGreen"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="600"
+                Opacity="0.97">
+
+            <StackPanel>
+                <Button Content="← Назад"
+                        Width="100"
+                        Margin="0,0,0,15"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource ElegantButtonStyle}"
+                        Command="{Binding BackCommand}"/>
+
+                <TextBlock Text="{Binding Product.Name}"
+                           FontSize="26"
+                           FontFamily="Georgia"
+                           FontWeight="Bold"
+                           Foreground="DarkGreen"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="Ваш отзыв:"
+                               FontWeight="SemiBold"
+                               Margin="0,10,0,5"/>
+
+                    <TextBox Text="{Binding ReviewComment, UpdateSourceTrigger=PropertyChanged}"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             MinHeight="100"
+                             MaxLength="500"
+                             VerticalScrollBarVisibility="Auto"
+                             Margin="0,0,0,15"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Отправить отзыв"
+                                Style="{StaticResource ElegantButtonStyle}"
+                                Width="180"
+                                Height="40"
+                                Margin="0 0 10 0"
+                                Command="{Binding SubmitReviewCommand}"
+                                Visibility="{Binding HasExistingReview, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=inverse}"/>
+
+                        <Button Content="Изменить отзыв"
+                                Style="{StaticResource ElegantButtonStyle}"
+                                Width="180"
+                                Height="40"
+                                Command="{Binding UpdateReviewCommand}"
+                                Visibility="{Binding HasExistingReview, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
