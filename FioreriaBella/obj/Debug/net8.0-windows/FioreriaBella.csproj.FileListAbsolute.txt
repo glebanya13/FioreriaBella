@@ -159,7 +159,9 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ManageProductsView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ManageUsersView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyOrdersView.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\OrderView.g.cs
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\RegisterView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\UserView.g.cs
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\App.g.cs
@@ -174,6 +176,8 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ManageOrdersView.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ManageUsersView.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyOrdersView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.baml
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.g.resources
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.AssemblyInfoInputs.cache
@@ -186,7 +190,3 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.pdb
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.genruntimeconfig.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\ref\FioreriaBella.dll
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.baml
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\MyPaymentsView.g.cs
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.baml
-C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewView.g.cs

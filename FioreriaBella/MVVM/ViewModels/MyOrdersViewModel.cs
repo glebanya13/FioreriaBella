@@ -3,6 +3,7 @@ using FioreriaBella.Models.Entities;
 using FioreriaBella.MVVM.Commands;
 using FioreriaBella.MVVM.Services;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FioreriaBella.MVVM.ViewModels
@@ -22,8 +23,10 @@ namespace FioreriaBella.MVVM.ViewModels
         }
 
         public ICommand BackCommand { get; }
+        public ICommand CancelOrderCommand { get; }
 
         public event Action? BackRequested;
+        public event Action? OrderCancelled;
 
         public MyOrdersViewModel(IUnitOfWork unitOfWork, UserSessionService sessionService)
         {
@@ -31,8 +34,34 @@ namespace FioreriaBella.MVVM.ViewModels
             _sessionService = sessionService;
 
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
+            CancelOrderCommand = new RelayCommand(CancelOrder);
 
             LoadOrders();
+        }
+
+        private void CancelOrder(object parameter)
+        {
+            if (parameter is not Order order || order.Status == "Отменен")
+                return;
+
+            var result = MessageBox.Show(
+                $"Вы уверены, что хотите отменить заказ #{order.Id}?",
+                "Подтверждение отмены",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                order.Status = "Отменен";
+                _unitOfWork.Orders.Update(order);
+                _unitOfWork.SaveChanges();
+
+                LoadOrders(); // Обновляем список заказов
+                OrderCancelled?.Invoke();
+
+                MessageBox.Show("Заказ успешно отменен", "Отмена заказа",
+                              MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void LoadOrders()

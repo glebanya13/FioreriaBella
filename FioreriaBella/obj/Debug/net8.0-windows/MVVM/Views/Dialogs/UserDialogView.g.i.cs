@@ -60,7 +60,7 @@ namespace FioreriaBella.MVVM.Views.Dialogs {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FioreriaBella;V1.0.0.0;component/mvvm/views/dialogs/userdialogview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FioreriaBella;component/mvvm/views/dialogs/userdialogview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\Views\Dialogs\UserDialogView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

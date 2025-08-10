@@ -1,30 +1,30 @@
-using FioreriaBella.Models.Entities;
+﻿using FioreriaBella.Models.Entities;
 using FioreriaBella.MVVM.ViewModels;
 using System.Windows;
 
 namespace FioreriaBella.MVVM.Views.Dialogs
 {
-  public partial class OrderDialog : Window
-  {
-    public Order Order { get; private set; }
-
-    public OrderDialog(Order existingOrder)
+    public partial class OrderDialog : Window
     {
-      InitializeComponent();
+        public Order Order { get; private set; }
 
-      var vm = new OrderDialogViewModel(existingOrder);
-      vm.RequestClose += (success, result) =>
-      {
-        DialogResult = success;
-        if (success && result != null)
+        public OrderDialog(Order existingOrder)
         {
-          Order = result;
+            InitializeComponent();
+
+            var vm = new OrderDialogViewModel(existingOrder);
+            vm.RequestClose += (success, result) =>
+            {
+                DialogResult = success;
+                if (success && result != null)
+                {
+                    Order = result;
+                }
+
+                Close();
+            };
+
+            DataContext = vm;
         }
-
-        Close();
-      };
-
-      DataContext = vm;
     }
-  }
 }

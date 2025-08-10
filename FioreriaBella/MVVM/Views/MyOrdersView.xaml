@@ -7,6 +7,7 @@
 
     <Page.Resources>
         <local:MultiplyConverter x:Key="MultiplyConverter"/>
+        <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
     </Page.Resources>
 
     <Grid Background="Transparent">
@@ -58,6 +59,29 @@
                         <DataGridTextColumn Header="Дата" Binding="{Binding OrderDate, StringFormat='dd.MM.yyyy'}" Width="*" MinWidth="100"/>
                         <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*" MinWidth="120"/>
                         <DataGridTextColumn Header="Сумма" Binding="{Binding TotalAmount, StringFormat='{}{0:N2} ₽'}" Width="*" MinWidth="100"/>
+                        <DataGridTemplateColumn Header="Действие" Width="Auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="Отменить" 
+                                                Command="{Binding DataContext.CancelOrderCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource OutlinedButtonStyle}"
+                                                Margin="2"
+                                                Padding="5,2"
+                                                Width="80"
+                                                Height="25"
+                                                FontSize="12"
+                                                Visibility="{Binding Status, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=Отменен}"/>
+                                        <TextBlock Text="Отменен" 
+                                                   Foreground="Gray"
+                                                   VerticalAlignment="Center"
+                                                   Margin="5,0"
+                                                   Visibility="{Binding Status, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=Invert}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
 
                     <DataGrid.RowDetailsTemplate>
