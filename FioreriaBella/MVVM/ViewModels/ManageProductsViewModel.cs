@@ -17,11 +17,14 @@ namespace FioreriaBella.MVVM.ViewModels
     public ICommand EditCommand { get; }
     public ICommand DeleteCommand { get; }
     public ICommand BackCommand { get; }
+    public ICommand ViewReviewsCommand { get; }
 
     public event Action<Product> RequestEditProduct;
     public event Action<Product> RequestDeleteProduct;
     public event Action RequestAddProduct;
     public event Action RequestBack;
+    public event Action<Product> RequestViewReviews;
+
 
     public ManageProductsViewModel(IUnitOfWork unitOfWork)
     {
@@ -33,6 +36,7 @@ namespace FioreriaBella.MVVM.ViewModels
       EditCommand = new RelayCommand(p => RequestEditProduct?.Invoke(p as Product));
       DeleteCommand = new RelayCommand(p => RequestDeleteProduct?.Invoke(p as Product));
       BackCommand = new RelayCommand(_ => RequestBack?.Invoke());
+      ViewReviewsCommand = new RelayCommand(p => RequestViewReviews?.Invoke(p as Product));
     }
 
     public void RefreshProducts()

@@ -64,6 +64,15 @@ namespace FioreriaBella.MVVM.Views
         }
       };
 
+    _viewModel.RequestViewReviews += product =>
+    {
+        if (product != null)
+        {
+            var reviewsView = new ProductReviewsView(_userSessionService, _unitOfWork, product.Id);
+            this.NavigationService?.Navigate(reviewsView);
+        }
+    };
+
       _viewModel.RequestBack += () =>
       {
         this.NavigationService?.GoBack();

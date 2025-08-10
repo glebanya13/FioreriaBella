@@ -1,0 +1,65 @@
+﻿<Page x:Class="FioreriaBella.MVVM.Views.ProductReviewsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Отзывы о товаре"
+      Background="Transparent">
+
+    <Grid Background="Transparent">
+        <Border Padding="30"
+                BorderBrush="Goldenrod"
+                BorderThickness="2"
+                CornerRadius="16"
+                Width="800"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Background="#FFFDF5F0"
+                SnapsToDevicePixels="True"
+                Margin="0,20">
+
+            <StackPanel>
+                <Button Content="← Назад"
+                        Width="100"
+                        Margin="0,0,0,15"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource ElegantButtonStyle}"
+                        Command="{Binding BackCommand}"/>
+
+                <TextBlock Text="{Binding ProductName, StringFormat='Отзывы о товаре: {0}'}"
+                           FontSize="26"
+                           FontFamily="Georgia"
+                           FontWeight="Bold"
+                           Foreground="DarkOliveGreen"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <DataGrid ItemsSource="{Binding Reviews}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          RowHeight="60"
+                          ColumnHeaderHeight="35"
+                          Style="{StaticResource ElegantDataGridStyle}">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Пользователь" Binding="{Binding User.Username}" Width="*"/>
+                        <DataGridTextColumn Header="Дата" Binding="{Binding CreatedAt, StringFormat='dd.MM.yyyy'}" Width="120"/>
+                        <DataGridTextColumn Header="Отзыв" Binding="{Binding Comment}" Width="*"/>
+
+                        <DataGridTemplateColumn Header="Действия" Width="100">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Удалить"
+                                            Command="{Binding DataContext.DeleteReviewCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource OutlinedButtonStyle}"
+                                            Margin="2"
+                                            Padding="5,2"
+                                            FontSize="12"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

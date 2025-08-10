@@ -18,6 +18,7 @@
     <None Remove="MVVM\Resources\Background.jpg" />
     <None Remove="MVVM\Resources\delete_icon.png" />
     <None Remove="MVVM\Resources\edit_icon.png" />
+    <None Remove="MVVM\Resources\view_icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +45,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="MVVM\Resources\edit_icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MVVM\Resources\view_icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -190,3 +190,5 @@ C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.pdb
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\FioreriaBella.genruntimeconfig.cache
 C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\ref\FioreriaBella.dll
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewsView.baml
+C:\Users\gleb2\source\repos\FioreriaBella\FioreriaBella\obj\Debug\net8.0-windows\MVVM\Views\ProductReviewsView.g.cs

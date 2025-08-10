@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="ManageProducts">
 
-  <Grid Background="Transparent">
-    <Border Padding="30"
+    <Grid Background="Transparent">
+        <Border Padding="30"
             BorderBrush="Goldenrod"
             BorderThickness="2"
             CornerRadius="16"
@@ -14,16 +14,16 @@
             Background="#FFFDF5F0"
             SnapsToDevicePixels="True">
 
-      <StackPanel>
+            <StackPanel>
 
-        <Button Content="← Назад"
+                <Button Content="← Назад"
                 Command="{Binding BackCommand}"
                 Style="{StaticResource ElegantButtonStyle}"
                 Width="100"
                 Margin="0,0,0,15"
                 HorizontalAlignment="Left" />
 
-        <TextBlock Text="Управление товарами"
+                <TextBlock Text="Управление товарами"
                    FontSize="24"
                    FontWeight="Bold"
                    FontFamily="Georgia"
@@ -31,14 +31,14 @@
                    HorizontalAlignment="Center"
                    Margin="0,0,0,20"/>
 
-        <Button Content="＋ Новый товар"
+                <Button Content="＋ Новый товар"
                 Command="{Binding AddCommand}"
                 Style="{StaticResource ElegantButtonStyle}"
                 Width="150"
                 Margin="0,0,0,15"
                 HorizontalAlignment="Left" />
 
-        <DataGrid x:Name="ProductsGrid"
+                <DataGrid x:Name="ProductsGrid"
                   ItemsSource="{Binding Products}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
@@ -50,90 +50,99 @@
                   Margin="0,0,0,10"
                   Style="{StaticResource ElegantDataGridStyle}">
 
-          <DataGrid.Columns>
+                    <DataGrid.Columns>
 
-            <DataGridTemplateColumn Header="ID" Width="50">
-              <DataGridTemplateColumn.CellTemplate>
-                <DataTemplate>
-                  <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </DataTemplate>
-              </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="ID" Width="50">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Название" Width="130">
-              <DataGridTemplateColumn.CellTemplate>
-                <DataTemplate>
-                  <TextBlock Text="{Binding Name}" 
+                        <DataGridTemplateColumn Header="Название" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" 
                              TextWrapping="Wrap"
                              FontFamily="Palatino Linotype"
                              Padding="4"
                              Foreground="#4B2E2B"/>
-                </DataTemplate>
-              </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Описание" Width="180">
-              <DataGridTemplateColumn.CellTemplate>
-                <DataTemplate>
-                  <TextBlock Text="{Binding Description}"
+                        <DataGridTemplateColumn Header="Описание" Width="170">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Description}"
                              TextWrapping="Wrap"
                              FontFamily="Palatino Linotype"
                              Foreground="#4B2E2B"
                              Padding="4"/>
-                </DataTemplate>
-              </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
-            <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="80"/>
-            <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="100"/>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="80"/>
+                        <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="100"/>
 
-            <DataGridTemplateColumn Header="Изображение" Width="120">
-              <DataGridTemplateColumn.CellTemplate>
-                <DataTemplate>
-                  <Border Width="60" Height="60"
+                        <DataGridTemplateColumn Header="Изображение" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border Width="60" Height="60"
                           BorderBrush="Goldenrod"
                           BorderThickness="1"
                           CornerRadius="4"
                           Background="#FFF">
-                    <Image Source="{Binding Picture}"
+                                        <Image Source="{Binding Picture}"
                            Stretch="UniformToFill"
                            ClipToBounds="True"
                            Width="60" Height="60"/>
-                  </Border>
-                </DataTemplate>
-              </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                                    </Border>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="Действия" Width="100">
-              <DataGridTemplateColumn.CellTemplate>
-                <DataTemplate>
-                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Width="30" Height="30"
-                            Margin="3"
+                        <DataGridTemplateColumn Header="Действия" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Width="30" Height="30"
+                            Margin="2"
+                            Style="{StaticResource IconButtonStyle}"
+                            ToolTip="Просмотр отзывов"
+                            Command="{Binding DataContext.ViewReviewsCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}">
+                                            <Image Source="pack://application:,,,/MVVM/Resources/view_icon.png" Width="18" Height="18"/>
+                                        </Button>
+
+                                        <Button Width="30" Height="30"
+                            Margin="2"
                             Style="{StaticResource IconButtonStyle}"
                             ToolTip="Редактировать"
                             Command="{Binding DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=Page}}"
                             CommandParameter="{Binding}">
-                      <Image Source="pack://application:,,,/MVVM/Resources/edit_icon.png" Width="18" Height="18"/>
-                    </Button>
+                                            <Image Source="pack://application:,,,/MVVM/Resources/edit_icon.png" Width="18" Height="18"/>
+                                        </Button>
 
-                    <Button Width="30" Height="30"
-                            Margin="3"
+                                        <Button Width="30" Height="30"
+                            Margin="2"
                             Style="{StaticResource IconButtonStyle}"
                             ToolTip="Удалить"
                             Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Page}}"
                             CommandParameter="{Binding}">
-                      <Image Source="pack://application:,,,/MVVM/Resources/delete_icon.png" Width="18" Height="18"/>
-                    </Button>
-                  </StackPanel>
-                </DataTemplate>
-              </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                                            <Image Source="pack://application:,,,/MVVM/Resources/delete_icon.png" Width="18" Height="18"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
-          </DataGrid.Columns>
-        </DataGrid>
+                    </DataGrid.Columns>
+                </DataGrid>
 
-      </StackPanel>
-    </Border>
-  </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
 </Page>
