@@ -39,6 +39,7 @@ namespace FioreriaBella.MVVM.Views
       {
         if (product != null)
         {
+          var oldPicturePath = product.Picture; // Сохраняем старый путь
           var dialog = new ProductDialog(product);
           if (dialog.ShowDialog() == true && dialog.Result is Product updatedProduct)
           {
@@ -46,6 +47,13 @@ namespace FioreriaBella.MVVM.Views
             product.Description = updatedProduct.Description;
             product.Price = updatedProduct.Price;
             product.Quantity = updatedProduct.Quantity;
+            
+            // Если изображение изменилось и старое было локальным, удаляем его
+            if (oldPicturePath != updatedProduct.Picture && !string.IsNullOrWhiteSpace(oldPicturePath))
+            {
+              ImageService.DeleteImage(oldPicturePath);
+            }
+            
             product.Picture = updatedProduct.Picture;
 
             _unitOfWork.Products.Update(product);
@@ -58,6 +66,12 @@ namespace FioreriaBella.MVVM.Views
       {
         if (product != null && MessageBox.Show($"Удалить товар \"{product.Name}\"?", "Подтверждение", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
         {
+          // Удаляем изображение продукта, если оно локальное
+          if (!string.IsNullOrWhiteSpace(product.Picture))
+          {
+            ImageService.DeleteImage(product.Picture);
+          }
+          
           _unitOfWork.Products.Remove(product);
           _unitOfWork.SaveChanges();
           _viewModel.Products.Remove(product);
