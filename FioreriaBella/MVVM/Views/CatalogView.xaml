@@ -66,6 +66,8 @@
                         <ComboBoxItem Content="Без сортировки"/>
                         <ComboBoxItem Content="Цена ↑"/>
                         <ComboBoxItem Content="Цена ↓"/>
+                        <ComboBoxItem Content="Рейтинг ↑"/>
+                        <ComboBoxItem Content="Рейтинг ↓"/>
                     </ComboBox>
                 </Grid>
 
@@ -123,6 +125,22 @@
                                TextTrimming="WordEllipsis"
                                TextAlignment="Center"
                                Margin="0,0,0,10" />
+
+                                        <StackPanel Orientation="Horizontal"
+                                                    HorizontalAlignment="Center"
+                                                    Margin="0,0,0,10">
+                                            <TextBlock Text="⭐"
+                                                       FontSize="16"
+                                                       Foreground="Goldenrod"
+                                                       Margin="0,0,4,0"/>
+                                            <TextBlock Text="{Binding AverageRating, StringFormat={}{0:F1}}"
+                                                       FontWeight="SemiBold"
+                                                       Foreground="#4B2E2B"/>
+                                            <TextBlock Text="{Binding ReviewsCount, StringFormat=' ({0} отзывов)'}"
+                                                       Margin="6,0,0,0"
+                                                       Foreground="#6B4E3E"
+                                                       FontSize="12"/>
+                                        </StackPanel>
 
                                         <TextBlock Text="{Binding Price, StringFormat=€{0:F2}}"
                                FontWeight="SemiBold"

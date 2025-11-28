@@ -48,6 +48,7 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Пользователь" Binding="{Binding User.Username}" Width="*"/>
                         <DataGridTextColumn Header="Дата" Binding="{Binding CreatedAt, StringFormat='dd.MM.yyyy'}" Width="120"/>
+                        <DataGridTextColumn Header="Оценка" Binding="{Binding Rating}" Width="100"/>
                         <DataGridTextColumn Header="Отзыв" Binding="{Binding Comment}" Width="*"/>
                         <DataGridTemplateColumn Header="Действия" Width="100">
                             <DataGridTemplateColumn.CellTemplate>
@@ -81,6 +82,11 @@
                                Margin="0,0,10,0"/>
                                         <TextBlock Text="{Binding CreatedAt, StringFormat='dd.MM.yyyy'}"
                                Style="{StaticResource ReviewDateText}"/>
+                                        <TextBlock Text="{Binding Rating, StringFormat='  ⭐ {0}/5'}"
+                                                   Margin="10,0,0,0"
+                                                   FontFamily="Georgia"
+                                                   Foreground="DarkGoldenrod"
+                                                   VerticalAlignment="Center"/>
                                     </StackPanel>
                                     <TextBlock Text="{Binding Comment}" 
                            Style="{StaticResource ReviewCommentText}"/>

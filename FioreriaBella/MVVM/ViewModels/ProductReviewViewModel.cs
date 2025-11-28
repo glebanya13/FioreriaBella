@@ -15,6 +15,7 @@ namespace FioreriaBella.MVVM.ViewModels
         private readonly Product _product;
         private bool _hasExistingReview;
         private ProductReview? _existingReview;
+        private int _selectedRating = 5;
 
         public Product Product => _product;
 
@@ -48,8 +49,22 @@ namespace FioreriaBella.MVVM.ViewModels
         }
 
         public bool HasExistingReview => _hasExistingReview;
-        public bool CanSubmitReview => !_hasExistingReview && ReviewCommentColor == "Green";
-        public bool CanUpdateReview => _hasExistingReview && ReviewCommentColor == "Green";
+        public bool CanSubmitReview => !_hasExistingReview && ReviewCommentColor == "Green" && SelectedRating >= 1;
+        public bool CanUpdateReview => _hasExistingReview && ReviewCommentColor == "Green" && SelectedRating >= 1;
+
+        public int SelectedRating
+        {
+            get => _selectedRating;
+            set
+            {
+                var clamped = Math.Clamp(value, 1, 5);
+                if (SetProperty(ref _selectedRating, clamped))
+                {
+                    OnPropertyChanged(nameof(CanSubmitReview));
+                    OnPropertyChanged(nameof(CanUpdateReview));
+                }
+            }
+        }
 
         public ICommand BackCommand { get; }
         public ICommand SubmitReviewCommand { get; }
@@ -111,6 +126,7 @@ namespace FioreriaBella.MVVM.ViewModels
             if (_hasExistingReview)
             {
                 ReviewComment = _existingReview?.Comment ?? string.Empty;
+                SelectedRating = _existingReview?.Rating ?? 5;
             }
         }
 
@@ -123,7 +139,8 @@ namespace FioreriaBella.MVVM.ViewModels
                 ProductId = _product.Id,
                 UserId = _sessionService.CurrentUser.Id,
                 Comment = ReviewComment,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.Now,
+                Rating = SelectedRating
             };
 
             _unitOfWork.ProductReviews.Add(review);
@@ -142,6 +159,7 @@ namespace FioreriaBella.MVVM.ViewModels
 
             _existingReview.Comment = ReviewComment;
             _existingReview.CreatedAt = DateTime.Now;
+            _existingReview.Rating = SelectedRating;
 
             _unitOfWork.ProductReviews.Update(_existingReview);
             _unitOfWork.SaveChanges();

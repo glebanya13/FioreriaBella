@@ -111,6 +111,7 @@ namespace FioreriaBella.DAL
         entity.HasKey(r => r.Id);
         entity.Property(r => r.Comment).HasMaxLength(1000);
         entity.Property(r => r.CreatedAt).IsRequired().HasDefaultValueSql("GETDATE()");
+        entity.Property(r => r.Rating).IsRequired();
       });
 
       modelBuilder.Entity<Address>(entity =>

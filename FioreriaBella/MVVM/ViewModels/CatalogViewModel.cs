@@ -2,9 +2,11 @@ using FioreriaBella.DAL.Interfaces;
 using FioreriaBella.Models.Entities;
 using FioreriaBella.MVVM.Commands;
 using FioreriaBella.MVVM.Services;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
+using System.Linq;
 
 namespace FioreriaBella.MVVM.ViewModels
 {
@@ -61,6 +63,32 @@ namespace FioreriaBella.MVVM.ViewModels
         private void LoadProducts()
         {
             _allProducts = _unitOfWork.Products.GetAll().ToList();
+
+            var reviewStats = _unitOfWork.ProductReviews
+                .GetAll()
+                .GroupBy(r => r.ProductId)
+                .ToDictionary(
+                    g => g.Key,
+                    g => new
+                    {
+                        Average = g.Average(r => r.Rating),
+                        Count = g.Count()
+                    });
+
+            foreach (var product in _allProducts)
+            {
+                if (reviewStats.TryGetValue(product.Id, out var stats))
+                {
+                    product.ReviewsCount = stats.Count;
+                    product.AverageRating = Math.Round(stats.Average, 1);
+                }
+                else
+                {
+                    product.ReviewsCount = 0;
+                    product.AverageRating = 0;
+                }
+            }
+
             ApplyFilters();
         }
 
@@ -119,6 +147,18 @@ namespace FioreriaBella.MVVM.ViewModels
                     break;
                 case "Цена ↓":
                     sorted = filtered.OrderByDescending(p => p.Price);
+                    break;
+                case "Рейтинг ↑":
+                    sorted = filtered
+                        .OrderBy(p => p.ReviewsCount > 0 ? 0 : 1)
+                        .ThenBy(p => p.AverageRating)
+                        .ThenBy(p => p.ReviewsCount);
+                    break;
+                case "Рейтинг ↓":
+                    sorted = filtered
+                        .OrderBy(p => p.ReviewsCount > 0 ? 0 : 1)
+                        .ThenByDescending(p => p.AverageRating)
+                        .ThenByDescending(p => p.ReviewsCount);
                     break;
                 default:
                     sorted = filtered.OrderBy(p => p.Id);

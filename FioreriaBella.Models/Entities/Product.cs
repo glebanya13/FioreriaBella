@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 namespace FioreriaBella.Models.Entities
@@ -11,6 +12,8 @@ namespace FioreriaBella.Models.Entities
     private decimal _price;
     private int _quantity;
     private string? _picture;
+    private double _averageRating;
+    private int _reviewsCount;
 
     public int Id
     {
@@ -46,6 +49,20 @@ namespace FioreriaBella.Models.Entities
     {
       get => _picture;
       set => SetField(ref _picture, value);
+    }
+
+    [NotMapped]
+    public double AverageRating
+    {
+      get => _averageRating;
+      set => SetField(ref _averageRating, value);
+    }
+
+    [NotMapped]
+    public int ReviewsCount
+    {
+      get => _reviewsCount;
+      set => SetField(ref _reviewsCount, value);
     }
 
     public ICollection<Cart>? Carts { get; set; }
