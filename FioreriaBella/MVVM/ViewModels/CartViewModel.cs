@@ -93,7 +93,23 @@ namespace FioreriaBella.MVVM.ViewModels
         if (sender is Cart item)
         {
           if (item.Quantity < 1)
+          {
             item.Quantity = 1;
+          }
+          else
+          {
+            // Проверяем наличие товара на складе
+            var product = _unitOfWork.Products.GetById(item.ProductId);
+            if (product != null && item.Quantity > product.Quantity)
+            {
+              System.Windows.MessageBox.Show(
+                $"Недостаточно товара '{product.Name}' на складе. Доступно: {product.Quantity}",
+                "Недостаточно товара",
+                System.Windows.MessageBoxButton.OK,
+                System.Windows.MessageBoxImage.Warning);
+              item.Quantity = product.Quantity;
+            }
+          }
 
           _unitOfWork.Carts.Update(item);
           _unitOfWork.SaveChanges();
@@ -117,6 +133,25 @@ namespace FioreriaBella.MVVM.ViewModels
     {
       if (parameter is Cart cartItem)
       {
+        // Проверяем наличие товара на складе
+        var product = _unitOfWork.Products.GetById(cartItem.ProductId);
+        if (product == null)
+        {
+          System.Windows.MessageBox.Show("Товар не найден.", "Ошибка", 
+            System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
+          return;
+        }
+
+        if (cartItem.Quantity >= product.Quantity)
+        {
+          System.Windows.MessageBox.Show(
+            $"Недостаточно товара '{product.Name}' на складе. Доступно: {product.Quantity}",
+            "Недостаточно товара",
+            System.Windows.MessageBoxButton.OK,
+            System.Windows.MessageBoxImage.Warning);
+          return;
+        }
+
         cartItem.Quantity++;
         _unitOfWork.Carts.Update(cartItem);
         _unitOfWork.SaveChanges();

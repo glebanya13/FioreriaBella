@@ -101,14 +101,51 @@ namespace FioreriaBella.MVVM.ViewModels
             if (userId == null)
                 return;
 
+            // Проверяем наличие товара на складе
+            var productInDb = _unitOfWork.Products.GetById(product.Id);
+            if (productInDb == null)
+            {
+                System.Windows.MessageBox.Show(
+                    "Товар не найден.",
+                    "Ошибка",
+                    System.Windows.MessageBoxButton.OK,
+                    System.Windows.MessageBoxImage.Error);
+                return;
+            }
+
+            if (productInDb.Quantity < 1)
+            {
+                System.Windows.MessageBox.Show(
+                    $"Товар \"{product.Name}\" отсутствует на складе.",
+                    "Недостаточно товара",
+                    System.Windows.MessageBoxButton.OK,
+                    System.Windows.MessageBoxImage.Warning);
+                return;
+            }
+
             var existing = _unitOfWork.Carts
                 .GetAll()
                 .FirstOrDefault(c => c.UserId == userId && c.ProductId == product.Id);
 
             if (existing != null)
             {
+                // Проверяем, можем ли добавить еще один товар
+                if (existing.Quantity >= productInDb.Quantity)
+                {
+                    System.Windows.MessageBox.Show(
+                        $"Недостаточно товара \"{product.Name}\" на складе. Доступно: {productInDb.Quantity}",
+                        "Недостаточно товара",
+                        System.Windows.MessageBoxButton.OK,
+                        System.Windows.MessageBoxImage.Warning);
+                    return;
+                }
+
+                existing.Quantity++;
+                _unitOfWork.Carts.Update(existing);
+                _unitOfWork.SaveChanges();
+
                 System.Windows.MessageBox.Show(
-                    $"Товар \"{product.Name}\" уже в корзине.",
+                    $"Товар \"{product.Name}\" добавлен в корзину.",
                     "Информация",
                     System.Windows.MessageBoxButton.OK,
                     System.Windows.MessageBoxImage.Information);

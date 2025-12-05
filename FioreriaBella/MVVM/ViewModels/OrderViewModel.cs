@@ -198,6 +198,38 @@ public class OrderViewModel : BaseViewModel
             return;
         }
 
+        // Проверяем наличие товаров на складе
+        var insufficientProducts = new List<string>();
+        foreach (var cartItem in cartItems)
+        {
+            if (cartItem.Product == null)
+            {
+                insufficientProducts.Add($"Товар с ID {cartItem.ProductId} не найден");
+                continue;
+            }
+
+            // Загружаем актуальные данные о товаре из БД
+            var product = _unitOfWork.Products.GetById(cartItem.ProductId);
+            if (product == null)
+            {
+                insufficientProducts.Add($"Товар '{cartItem.Product.Name}' не найден");
+                continue;
+            }
+
+            if (product.Quantity < cartItem.Quantity)
+            {
+                insufficientProducts.Add(
+                    $"Товар '{product.Name}': запрошено {cartItem.Quantity}, доступно {product.Quantity}");
+            }
+        }
+
+        if (insufficientProducts.Any())
+        {
+            var message = "Недостаточно товаров на складе:\n\n" + string.Join("\n", insufficientProducts);
+            MessageBox.Show(message, "Ошибка оформления заказа", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+        }
+
         var order = new Order
         {
             UserId = userId.Value,
@@ -213,6 +245,17 @@ public class OrderViewModel : BaseViewModel
 
         _unitOfWork.Orders.Add(order);
         _unitOfWork.SaveChanges();
+
+        // Обновляем количество товаров на складе
+        foreach (var cartItem in cartItems)
+        {
+            var product = _unitOfWork.Products.GetById(cartItem.ProductId);
+            if (product != null)
+            {
+                product.Quantity -= cartItem.Quantity;
+                _unitOfWork.Products.Update(product);
+            }
+        }
 
         var payment = new Payment
         {
