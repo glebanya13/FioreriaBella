@@ -34,7 +34,26 @@
                            FontWeight="Bold"
                            Foreground="DarkGreen"
                            HorizontalAlignment="Center"
-                           Margin="0,0,0,20"/>
+                           Margin="0,0,0,10"/>
+
+                <TextBlock Text="{Binding ReviewAvailabilityMessage}"
+                           FontSize="13"
+                           FontStyle="Italic"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,20"
+                           TextAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="Red"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding CanAddReview}" Value="True">
+                                    <Setter Property="Foreground" Value="DarkGreen"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
 
                 <StackPanel Margin="0,0,0,20">
                     <TextBlock Text="Ваш отзыв:"

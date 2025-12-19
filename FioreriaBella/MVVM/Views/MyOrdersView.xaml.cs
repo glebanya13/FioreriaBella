@@ -21,6 +21,10 @@ namespace FioreriaBella.MVVM.Views
             DataContext = vm;
 
             vm.BackRequested += () => this.NavigationService?.GoBack();
+            vm.LeaveReviewRequested += product =>
+            {
+                this.NavigationService?.Navigate(new ProductReviewView(_userSessionService, _unitOfWork, product));
+            };
         }
     }
 }

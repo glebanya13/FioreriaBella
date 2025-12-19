@@ -8,70 +8,113 @@
     <converters:ImagePathConverter x:Key="ImagePathConverter" />
   </Page.Resources>
     <Grid Background="Transparent" Margin="20">
-        <Border Padding="20"
+            <Border Padding="20"
             BorderBrush="DarkOliveGreen"
             BorderThickness="2"
             CornerRadius="12"
             Margin="30"
             Background="#FFFDF5F0"
             SnapsToDevicePixels="True"
-            Width="600"
+            Width="1200"
             Opacity="0.97">
 
-            <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Button Content="← Назад"
-                Width="100"
-                Margin="0,0,0,15"
-                HorizontalAlignment="Left"
-                Style="{StaticResource ElegantButtonStyle}"
-                Command="{Binding BackCommand}" />
+                <StackPanel Grid.Row="0">
+                    <Button Content="← Назад"
+                    Width="100"
+                    Margin="0,0,0,15"
+                    HorizontalAlignment="Left"
+                    Style="{StaticResource ElegantButtonStyle}"
+                    Command="{Binding BackCommand}" />
 
-                <TextBlock Text="Catalogo Fiori Freschi"
-                   FontSize="26"
-                   FontFamily="Georgia"
-                   FontWeight="Bold"
-                   Foreground="DarkOliveGreen"
-                   HorizontalAlignment="Center"
-                   Margin="0,0,0,10" />
+                    <TextBlock Text="Catalogo Fiori Freschi"
+                       FontSize="26"
+                       FontFamily="Georgia"
+                       FontWeight="Bold"
+                       Foreground="DarkOliveGreen"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10" />
 
-                <TextBlock Text="Просмотрите наш выбор свежих цветов и растений."
-                   FontSize="16"
-                   FontFamily="Palatino Linotype"
-                   Foreground="SaddleBrown"
-                   TextWrapping="Wrap"
-                   TextAlignment="Center"
-                   Margin="0,0,0,20" />
+                    <TextBlock Text="Просмотрите наш выбор свежих цветов и растений."
+                       FontSize="16"
+                       FontFamily="Palatino Linotype"
+                       Foreground="SaddleBrown"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Margin="0,0,0,20" />
 
-                <Grid Margin="0,0,0,20">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="2*" />
-                    </Grid.ColumnDefinitions>
+                    <Grid Margin="0,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
 
-                    <TextBox Grid.Column="0"
-                   Margin="0,0,15,0"
-                   FontSize="13"
-                   VerticalContentAlignment="Center"
-                   Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
-                   Style="{StaticResource ElegantInputStyle}"
-                   Tag="Поиск..."
-                   HorizontalAlignment="Stretch" />
+                        <TextBox Grid.Row="0" Grid.Column="0"
+                       Margin="0,0,15,10"
+                       FontSize="13"
+                       VerticalContentAlignment="Center"
+                       Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                       Style="{StaticResource ElegantInputStyle}"
+                       Tag="Поиск..."
+                       HorizontalAlignment="Stretch" />
 
-                    <ComboBox Grid.Column="1"
-                              Style="{StaticResource ElegantComboBoxStyle}"
-                              SelectedValue="{Binding SelectedSortOption, UpdateSourceTrigger=PropertyChanged}"
-                              SelectedValuePath="Content"
-                              HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Без сортировки"/>
-                        <ComboBoxItem Content="Цена ↑"/>
-                        <ComboBoxItem Content="Цена ↓"/>
-                        <ComboBoxItem Content="Рейтинг ↑"/>
-                        <ComboBoxItem Content="Рейтинг ↓"/>
-                    </ComboBox>
-                </Grid>
+                        <ComboBox Grid.Row="0" Grid.Column="1"
+                                  Style="{StaticResource ElegantComboBoxStyle}"
+                                  SelectedValue="{Binding SelectedSortOption, UpdateSourceTrigger=PropertyChanged}"
+                                  SelectedValuePath="Content"
+                                  HorizontalAlignment="Stretch"
+                                  Margin="0,0,0,10">
+                            <ComboBoxItem Content="Без сортировки"/>
+                            <ComboBoxItem Content="Цена ↑"/>
+                            <ComboBoxItem Content="Цена ↓"/>
+                            <ComboBoxItem Content="Рейтинг ↑"/>
+                            <ComboBoxItem Content="Рейтинг ↓"/>
+                        </ComboBox>
 
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="450" Padding="0,0,0,20">
+                        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                                    Orientation="Horizontal" 
+                                    HorizontalAlignment="Left"
+                                    Margin="0,0,0,0">
+                            <TextBlock Text="Цена от:" 
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,5,0"
+                                       FontSize="13"
+                                       Foreground="#4B2E2B"/>
+                            <TextBox Width="80"
+                                     FontSize="13"
+                                     VerticalContentAlignment="Center"
+                                     Text="{Binding MinPriceText, UpdateSourceTrigger=PropertyChanged}"
+                                     Style="{StaticResource ElegantInputStyle}"
+                                     Tag="Мин"
+                                     Margin="0,0,15,0"/>
+                            <TextBlock Text="до:" 
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,5,0"
+                                       FontSize="13"
+                                       Foreground="#4B2E2B"/>
+                            <TextBox Width="80"
+                                     FontSize="13"
+                                     VerticalContentAlignment="Center"
+                                     Text="{Binding MaxPriceText, UpdateSourceTrigger=PropertyChanged}"
+                                     Style="{StaticResource ElegantInputStyle}"
+                                     Tag="Макс"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto" 
+                              Padding="0,0,0,20"
+                              HorizontalScrollBarVisibility="Disabled">
                     <ItemsControl ItemsSource="{Binding Products}" Margin="0,0,0,10">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -87,9 +130,9 @@
                         Padding="10"
                         Margin="10,10,10,15"
                         Background="White"
-                        MinWidth="220"
-                        MaxWidth="220"
-                        Width="220">
+                        MinWidth="260"
+                        MaxWidth="260"
+                        Width="260">
                                     <Border.Effect>
                                         <DropShadowEffect Color="Black" Opacity="0.15" ShadowDepth="2" BlurRadius="4"/>
                                     </Border.Effect>
@@ -106,7 +149,7 @@
 
                                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
 
-                                        <Image Source="{Binding Picture, Converter={StaticResource ImagePathConverter}}" Width="180" Height="180" Stretch="UniformToFill" Margin="0,0,0,10" />
+                                        <Image Source="{Binding Picture, Converter={StaticResource ImagePathConverter}}" Width="220" Height="220" Stretch="UniformToFill" Margin="0,0,0,10" />
 
                                         <TextBlock Text="{Binding Name}"
                                FontWeight="Bold"
@@ -173,7 +216,7 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </ScrollViewer>
-            </StackPanel>
+            </Grid>
         </Border>
     </Grid>
 </Page>

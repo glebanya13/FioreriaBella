@@ -24,9 +24,11 @@ namespace FioreriaBella.MVVM.ViewModels
 
         public ICommand BackCommand { get; }
         public ICommand CancelOrderCommand { get; }
+        public ICommand LeaveReviewCommand { get; }
 
         public event Action? BackRequested;
         public event Action? OrderCancelled;
+        public event Action<Product>? LeaveReviewRequested;
 
         public MyOrdersViewModel(IUnitOfWork unitOfWork, UserSessionService sessionService)
         {
@@ -35,14 +37,31 @@ namespace FioreriaBella.MVVM.ViewModels
 
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
             CancelOrderCommand = new RelayCommand(CancelOrder);
+            LeaveReviewCommand = new RelayCommand(LeaveReview);
 
             LoadOrders();
         }
 
         private void CancelOrder(object parameter)
         {
-            if (parameter is not Order order || order.Status == "Отменен")
+            if (parameter is not Order order)
                 return;
+
+            // Нельзя отменить уже отмененный заказ
+            if (order.Status == "Отменен")
+            {
+                MessageBox.Show("Этот заказ уже отменен", "Информация",
+                              MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            // Нельзя отменить доставленный заказ
+            if (order.Status == "Доставлен")
+            {
+                MessageBox.Show("Нельзя отменить доставленный заказ", "Ошибка",
+                              MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
             var result = MessageBox.Show(
                 $"Вы уверены, что хотите отменить заказ #{order.Id}?",
@@ -88,6 +107,14 @@ namespace FioreriaBella.MVVM.ViewModels
                 }
 
                 Orders.Add(order);
+            }
+        }
+
+        private void LeaveReview(object parameter)
+        {
+            if (parameter is Product product)
+            {
+                LeaveReviewRequested?.Invoke(product);
             }
         }
     }

@@ -3,6 +3,7 @@ using FioreriaBella.MVVM.Commands;
 using FioreriaBella.MVVM.Services;
 using FioreriaBella.Models.Entities;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
@@ -16,8 +17,16 @@ namespace FioreriaBella.MVVM.ViewModels
         private bool _hasExistingReview;
         private ProductReview? _existingReview;
         private int _selectedRating = 5;
+        private bool _canAddReview = false;
+        private string _reviewAvailabilityMessage = string.Empty;
 
         public Product Product => _product;
+        public bool CanAddReview => _canAddReview;
+        public string ReviewAvailabilityMessage
+        {
+            get => _reviewAvailabilityMessage;
+            private set => SetProperty(ref _reviewAvailabilityMessage, value);
+        }
 
         private string _reviewComment = string.Empty;
         public string ReviewComment
@@ -49,7 +58,7 @@ namespace FioreriaBella.MVVM.ViewModels
         }
 
         public bool HasExistingReview => _hasExistingReview;
-        public bool CanSubmitReview => !_hasExistingReview && ReviewCommentColor == "Green" && SelectedRating >= 1;
+        public bool CanSubmitReview => !_hasExistingReview && _canAddReview && ReviewCommentColor == "Green" && SelectedRating >= 1;
         public bool CanUpdateReview => _hasExistingReview && ReviewCommentColor == "Green" && SelectedRating >= 1;
 
         public int SelectedRating
@@ -83,6 +92,7 @@ namespace FioreriaBella.MVVM.ViewModels
             _product = product;
 
             CheckExistingReview();
+            CheckOrderStatus(); // Вызываем после CheckExistingReview, чтобы учесть существующий отзыв
 
             BackCommand = new RelayCommand(_ => BackRequested?.Invoke());
             SubmitReviewCommand = new RelayCommand(_ => SubmitReview(), _ => CanSubmitReview);
@@ -106,6 +116,74 @@ namespace FioreriaBella.MVVM.ViewModels
                 ReviewCommentHint = "✓";
                 ReviewCommentColor = "Green";
             }
+        }
+
+        private void CheckOrderStatus()
+        {
+            if (_sessionService.CurrentUser == null)
+            {
+                _canAddReview = false;
+                ReviewAvailabilityMessage = "Необходимо войти в систему";
+                OnPropertyChanged(nameof(CanAddReview));
+                return;
+            }
+
+            var userId = _sessionService.CurrentUser.Id;
+            
+            // Проверяем, есть ли у пользователя заказ со статусом "Доставлен", содержащий этот товар
+            var allUserOrders = _unitOfWork.Orders
+                .Find(o => o.UserId == userId)
+                .ToList();
+
+            // Загружаем OrderItems для каждого заказа
+            foreach (var order in allUserOrders)
+            {
+                order.OrderItems = _unitOfWork.OrderItems
+                    .Find(oi => oi.OrderId == order.Id)
+                    .ToList();
+            }
+
+            // Проверяем наличие доставленных заказов с этим товаром
+            var deliveredOrders = allUserOrders
+                .Where(o => o.Status == "Доставлен")
+                .ToList();
+
+            _canAddReview = deliveredOrders.Any(order =>
+            {
+                if (order.OrderItems == null || !order.OrderItems.Any()) return false;
+                return order.OrderItems.Any(oi => oi.ProductId == _product.Id);
+            });
+
+            // Если у пользователя уже есть отзыв, разрешаем его обновлять
+            if (_hasExistingReview)
+            {
+                ReviewAvailabilityMessage = "Вы можете изменить свой отзыв";
+                _canAddReview = true; // Разрешаем обновление существующего отзыва
+            }
+            else if (_canAddReview)
+            {
+                ReviewAvailabilityMessage = "Вы можете оставить отзыв, так как этот товар был доставлен";
+            }
+            else
+            {
+                // Проверяем, есть ли вообще заказы с этим товаром
+                var hasAnyOrderWithProduct = allUserOrders.Any(order =>
+                {
+                    if (order.OrderItems == null || !order.OrderItems.Any()) return false;
+                    return order.OrderItems.Any(oi => oi.ProductId == _product.Id);
+                });
+
+                if (hasAnyOrderWithProduct)
+                {
+                    ReviewAvailabilityMessage = "Отзыв можно оставить только после доставки товара. Ваш заказ еще обрабатывается.";
+                }
+                else
+                {
+                    ReviewAvailabilityMessage = "Отзыв можно оставить только после покупки и доставки товара";
+                }
+            }
+
+            OnPropertyChanged(nameof(CanAddReview));
         }
 
         private void CheckExistingReview()

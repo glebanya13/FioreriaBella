@@ -37,6 +37,28 @@ namespace FioreriaBella.MVVM.ViewModels
             }
         }
 
+        private string _minPriceText = "";
+        public string MinPriceText
+        {
+            get => _minPriceText;
+            set
+            {
+                if (SetProperty(ref _minPriceText, value))
+                    ApplyFilters();
+            }
+        }
+
+        private string _maxPriceText = "";
+        public string MaxPriceText
+        {
+            get => _maxPriceText;
+            set
+            {
+                if (SetProperty(ref _maxPriceText, value))
+                    ApplyFilters();
+            }
+        }
+
         public ObservableCollection<Product> Products { get; } = new();
         private List<Product> _allProducts = new();
 
@@ -174,6 +196,17 @@ namespace FioreriaBella.MVVM.ViewModels
                 filtered = filtered.Where(p =>
                     p.Name.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
                     (p.Description != null && p.Description.Contains(SearchText, StringComparison.OrdinalIgnoreCase)));
+            }
+
+            // Фильтрация по диапазону цен
+            if (decimal.TryParse(MinPriceText, out decimal minPrice))
+            {
+                filtered = filtered.Where(p => p.Price >= minPrice);
+            }
+
+            if (decimal.TryParse(MaxPriceText, out decimal maxPrice))
+            {
+                filtered = filtered.Where(p => p.Price <= maxPrice);
             }
 
             IOrderedEnumerable<Product> sorted;
